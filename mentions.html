@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <!-- CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;">
+    
+    <title>Mentions Légales | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="DataSpaceSefer Logo" class="logo-img">
+                DataSpace<span class="highlight">Sefer</span>
+            </a>
+            
+            <button class="mobile-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav.about">À Propos</a></li>
+                    <li><a href="skills.html" class="nav-link" data-i18n="nav.skills">Compétences</a></li>
+                    <li><a href="projects.html" class="nav-link" data-i18n="nav.projects">Projets</a></li>
+                    <li><a href="contact.html" class="cta-btn" data-i18n="nav.contact">Me Contacter</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container section">
+        <div class="page-header detail-header">
+            <h1 class="page-title detail-title" data-i18n="mentions.title">Mentions <span class="highlight">Légales</span></h1>
+            <p class="page-subtitle" data-i18n="mentions.subtitle">
+                Informations juridiques concernant le site.
+            </p>
+        </div>
+
+        <div class="detail-grid">
+
+            <!-- 1. ÉDITEUR -->
+            <section class="detail-card">
+                <h2 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                    <i class="fas fa-user-edit" style="color: var(--accent-color);"></i> 
+                    <span data-i18n="mentions.editor_title">1. Éditeur du Site</span>
+                </h2>
+                <div style="color: var(--text-secondary); line-height: 1.8;">
+                    <p><strong data-i18n="mentions.name_label">Nom :</strong> Algul Sefer</p>
+                    <p><strong data-i18n="mentions.status_label">Statut :</strong> Étudiant en Informatique</p>
+                    <p><strong data-i18n="mentions.email_label">Email :</strong> seferalgul@hotmail.com</p>
+                    <p><strong data-i18n="mentions.phone_label">Téléphone :</strong> +33 7 69 04 92 90</p>
+                </div>
+            </section>
+
+            <!-- 2. HÉBERGEMENT -->
+            <section class="detail-card">
+                <h2 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                    <i class="fas fa-server" style="color: var(--accent-color);"></i> 
+                    <span data-i18n="mentions.host_title">2. Hébergement</span>
+                </h2>
+                <p style="color: var(--text-secondary); line-height: 1.6;" data-i18n="mentions.host_text">
+                    Ce site est hébergé par <strong>GitHub Pages</strong>.<br>
+                    Adresse : 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, United States.
+                </p>
+            </section>
+
+            <!-- 3. PROPRIÉTÉ INTELLECTUELLE -->
+            <section class="detail-card">
+                <h2 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                    <i class="fas fa-copyright" style="color: var(--accent-color);"></i> 
+                    <span data-i18n="mentions.ip_title">3. Propriété Intellectuelle</span>
+                </h2>
+                <p style="color: var(--text-secondary); line-height: 1.6;" data-i18n="mentions.ip_text">
+                    L'ensemble de ce site (structure, textes, logos, images, code) relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Toute reproduction, totale ou partielle, est interdite sans autorisation préalable.
+                </p>
+            </section>
+
+            <!-- 4. DONNÉES PERSONNELLES -->
+            <section class="detail-card">
+                <h2 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                    <i class="fas fa-user-shield" style="color: var(--accent-color);"></i> 
+                    <span data-i18n="mentions.data_title">4. Données Personnelles</span>
+                </h2>
+                <p style="color: var(--text-secondary); line-height: 1.6;" data-i18n="mentions.data_text">
+                    Ce site ne collecte aucune donnée personnelle à votre insu. Les informations envoyées via le formulaire de contact (nom, email) sont utilisées uniquement dans le cadre de nos échanges et ne sont jamais transmises à des tiers.
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="security.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

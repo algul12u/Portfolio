@@ -48,13 +48,13 @@
         <!-- Back Button -->
         <div style="margin-bottom: 2rem;">
             <a href="projects.html" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-secondary); font-weight: 500;">
-                <i class="fas fa-arrow-left"></i> Retour aux projets
+                <i class="fas fa-arrow-left"></i> <span data-i18n="common.back_projects">Retour aux projets</span>
             </a>
         </div>
 
         <!-- Project Header -->
-        <div class="page-header" style="text-align: left; padding: 0 0 3rem;">
-            <h1 class="page-title" style="font-size: 2.5rem; margin-bottom: 1rem;">
+        <div class="page-header detail-header">
+            <h1 class="page-title detail-title" data-i18n="project_details.lecri.title">
                 Le Cri – Expérience <span class="highlight">Interactive WebGL</span>
             </h1>
             <div class="project-tech" style="margin-bottom: 2rem;">
@@ -62,39 +62,39 @@
                 <span><i class="fas fa-code"></i> WebGL</span>
                 <span><i class="fas fa-paint-brush"></i> Blender</span>
             </div>
-            <p style="color: var(--text-secondary); max-width: 800px; font-size: 1.1rem; line-height: 1.6;">
+            <p class="detail-desc" data-i18n="project_details.lecri.description">
                 Ce projet consiste en la création d’une scène 3D complète et interactive réalisée en WebGL via Three.js, intégrée dans une page web conçue pour mettre en valeur une œuvre emblématique : Le Cri d’Edvard Munch. L’objectif était de transformer un tableau iconique en une expérience numérique immersive.
             </p>
             <div style="margin-top: 2rem; display: flex; gap: 1rem;">
                 <a href="https://med-css.github.io/LeCri-Munch/" class="cta-btn">
-                    <i class="fas fa-eye"></i> Voir le Projet
+                    <i class="fas fa-eye"></i> <span data-i18n="project_details.lecri.view_btn">Voir le Projet</span>
                 </a>
             </div>
         </div>
 
         <!-- Content Grid -->
-        <div style="display: grid; grid-template-columns: 1fr; gap: 3rem;">
+        <div class="detail-grid">
             
             <!-- Objectifs -->
-            <section style="background: var(--card-bg); padding: 2.5rem; border-radius: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--card-border);">
+            <section class="detail-card">
                 <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
-                    <i class="fas fa-bullseye" style="color: var(--accent-color);"></i> Objectifs du projet
+                    <i class="fas fa-bullseye" style="color: var(--accent-color);"></i> <span data-i18n="project_details.lecri.objectives_title">Objectifs du projet</span>
                 </h2>
-                <ul style="list-style: none; display: grid; gap: 1rem;">
-                    <li style="display: flex; gap: 1rem; align-items: start;">
-                        <span>Recréer une ambiance 3D inspirée du tableau Le Cri, en respectant son atmosphère visuelle.</span>
+                <ul class="list-grid">
+                    <li class="list-item">
+                        <span data-i18n="project_details.lecri.obj_1">Recréer une ambiance 3D inspirée du tableau Le Cri, en respectant son atmosphère visuelle.</span>
                     </li>
-                    <li style="display: flex; gap: 1rem; align-items: start;">
-                        <span>Concevoir une scène WebGL esthétique, fluide et optimisée pour le navigateur.</span>
+                    <li class="list-item">
+                        <span data-i18n="project_details.lecri.obj_2">Concevoir une scène WebGL esthétique, fluide et optimisée pour le navigateur.</span>
                     </li>
-                    <li style="display: flex; gap: 1rem; align-items: start;">
-                        <span>Intégrer différents modèles 3D, textures et effets graphiques avancés.</span>
+                    <li class="list-item">
+                        <span data-i18n="project_details.lecri.obj_3">Intégrer différents modèles 3D, textures et effets graphiques avancés.</span>
                     </li>
-                    <li style="display: flex; gap: 1rem; align-items: start;">
-                        <span>Permettre à l’utilisateur d’interagir avec la scène via des contrôles caméra et une interface GUI.</span>
+                    <li class="list-item">
+                        <span data-i18n="project_details.lecri.obj_4">Permettre à l’utilisateur d’interagir avec la scène via des contrôles caméra et une interface GUI.</span>
                     </li>
-                    <li style="display: flex; gap: 1rem; align-items: start;">
-                        <span>Illustrer la compréhension des technologies Three.js, GLTF, OBJ, éclairage et post-traitement.</span>
+                    <li class="list-item">
+                        <span data-i18n="project_details.lecri.obj_5">Illustrer la compréhension des technologies Three.js, GLTF, OBJ, éclairage et post-traitement.</span>
                     </li>
                 </ul>
             </section>
@@ -102,13 +102,13 @@
             <!-- Concept -->
             <section>
                  <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;">
-                    <i class="fas fa-lightbulb" style="color: var(--accent-color);"></i> Concept Général
+                    <i class="fas fa-lightbulb" style="color: var(--accent-color);"></i> <span data-i18n="project_details.lecri.concept_title">Concept Général</span>
                 </h2>
-                <div style="background: #fff; padding: 2rem; border-radius: 16px; border: 1px solid var(--card-border);">
-                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                <div class="step-card">
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;" data-i18n="project_details.lecri.concept_text_1">
                         L’utilisateur découvre une scène vaste et atmosphérique composée d’un environnement aquatique animé, de ponts 3D rappelant les passerelles du tableau original, de bateaux en mouvement, et d’un modèle 3D du personnage du Cri, mis en lumière comme une œuvre de musée.
                     </p>
-                     <p style="color: var(--text-secondary); line-height: 1.6;">
+                     <p style="color: var(--text-secondary); line-height: 1.6;" data-i18n="project_details.lecri.concept_text_2">
                         Une skybox immersive enveloppe toute la scène dans un ciel artistique, accompagnée d’effets visuels tels que brouillard, reflets au sol, textures spéculaires et jeu d’ombres réaliste.
                     </p>
                 </div>
@@ -117,52 +117,52 @@
             <!-- Caractéristiques -->
             <section>
                 <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;">
-                    <i class="fas fa-laptop-code" style="color: var(--accent-color);"></i> Caractéristiques Principales
+                    <i class="fas fa-laptop-code" style="color: var(--accent-color);"></i> <span data-i18n="project_details.lecri.features_title">Caractéristiques Principales</span>
                 </h2>
                 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                <div class="feature-grid">
                     <!-- Immersion -->
-                    <div style="background: var(--card-bg); padding: 2rem; border-radius: 16px; border: 1px solid var(--card-border);">
-                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-primary);">1. Scène 3D Immersive</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                    <div class="detail-card">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-primary);" data-i18n="project_details.lecri.feat_1_title">1. Scène 3D Immersive</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;" data-i18n="project_details.lecri.feat_1_text">
                             L’environnement est conçu pour envelopper le spectateur dans une ambiance rappelant l’expressivité du tableau. La skybox et les textures renforcent cette immersion.
                         </p>
                     </div>
 
                     <!-- Eclairage -->
-                    <div style="background: var(--card-bg); padding: 2rem; border-radius: 16px; border: 1px solid var(--card-border);">
-                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-primary);">2. Système d’Éclairage Sophistiqué</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                    <div class="detail-card">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-primary);" data-i18n="project_details.lecri.feat_2_title">2. Système d’Éclairage Sophistiqué</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;" data-i18n="project_details.lecri.feat_2_text">
                             Plusieurs sources de lumière coexistent : un soleil directionnel pour les ombres dramatiques, une lumière ambiante douce, et un spotlight focalisé sur le modèle.
                         </p>
                     </div>
 
                     <!-- Effets -->
-                    <div style="background: var(--card-bg); padding: 2rem; border-radius: 16px; border: 1px solid var(--card-border);">
-                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-primary);">3. Effets Avancés</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                    <div class="detail-card">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-primary);" data-i18n="project_details.lecri.feat_3_title">3. Effets Avancés</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;" data-i18n="project_details.lecri.feat_3_text">
                             Brouillard progressif pour la profondeur, matériaux transparents pour l'eau, et effets miroirs pour un rendu élégant et artistique.
                         </p>
                     </div>
 
                     <!-- Eau -->
-                    <div style="background: var(--card-bg); padding: 2rem; border-radius: 16px; border: 1px solid var(--card-border);">
-                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-primary);">4. Eau Dynamique</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                    <div class="detail-card">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-primary);" data-i18n="project_details.lecri.feat_4_title">4. Eau Dynamique</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;" data-i18n="project_details.lecri.feat_4_text">
                             Une large étendue d’eau travaillée avec texture répétée, specular map, brillance réglable et transparence contrôlée.
                         </p>
                     </div>
                      <!-- Animation -->
-                    <div style="background: var(--card-bg); padding: 2rem; border-radius: 16px; border: 1px solid var(--card-border);">
-                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-primary);">5. Animation Fluide</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                    <div class="detail-card">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-primary);" data-i18n="project_details.lecri.feat_5_title">5. Animation Fluide</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;" data-i18n="project_details.lecri.feat_5_text">
                              Objets 3D (bateaux) en mouvement sur des trajectoires calculées en temps réel, démontrant une gestion stable de l'animation JS.
                         </p>
                     </div>
                      <!-- GUI -->
-                    <div style="background: var(--card-bg); padding: 2rem; border-radius: 16px; border: 1px solid var(--card-border);">
-                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-primary);">6. Interface GUI</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                    <div class="detail-card">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-primary);" data-i18n="project_details.lecri.feat_6_title">6. Interface GUI</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;" data-i18n="project_details.lecri.feat_6_text">
                             Interface dat.GUI permettant de modifier en temps réel le zoom, le brouillard, les lumières et les propriétés de l'eau.
                         </p>
                     </div>
@@ -170,23 +170,23 @@
             </section>
 
             <!-- Compétences Demonstrées -->
-             <section style="background: #fff; padding: 2.5rem; border-radius: 20px; border: 1px solid var(--card-border);">
+             <section class="step-card">
                 <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
-                    <i class="fas fa-graduation-cap" style="color: var(--accent-color);"></i> Compétences Démontrées
+                    <i class="fas fa-graduation-cap" style="color: var(--accent-color);"></i> <span data-i18n="project_details.lecri.skills_title">Compétences Démontrées</span>
                 </h2>
-                <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
-                     <span style="background: #f1f5f9; padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 500; color: var(--text-primary);">WebGL & Three.js</span>
-                     <span style="background: #f1f5f9; padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 500; color: var(--text-primary);">Infographie 3D</span>
-                     <span style="background: #f1f5f9; padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 500; color: var(--text-primary);">Développement Web Moderne</span>
-                     <span style="background: #f1f5f9; padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 500; color: var(--text-primary);">Textures & Matériaux</span>
-                     <span style="background: #f1f5f9; padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 500; color: var(--text-primary);">Éclairage Avancé</span>
+                <div class="tech-tags">
+                     <span class="tech-tag" data-i18n="project_details.lecri.skill_1">WebGL & Three.js</span>
+                     <span class="tech-tag" data-i18n="project_details.lecri.skill_2">Infographie 3D</span>
+                     <span class="tech-tag" data-i18n="project_details.lecri.skill_3">Développement Web Moderne</span>
+                     <span class="tech-tag" data-i18n="project_details.lecri.skill_4">Textures & Matériaux</span>
+                     <span class="tech-tag" data-i18n="project_details.lecri.skill_5">Éclairage Avancé</span>
                 </div>
             </section>
 
             <!-- Conclusion -->
             <section style="text-align: center; margin-top: 2rem; background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(20, 184, 166, 0.1) 100%); padding: 3rem; border-radius: 20px;">
-                <h2 style="margin-bottom: 1rem; font-family: var(--font-heading);">Conclusion</h2>
-                <p style="color: var(--text-primary); max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+                <h2 style="margin-bottom: 1rem; font-family: var(--font-heading);" data-i18n="project_details.lecri.conclusion_title">Conclusion</h2>
+                <p style="color: var(--text-primary); max-width: 800px; margin: 0 auto; font-size: 1.1rem;" data-i18n="project_details.lecri.conclusion_text">
                     Ce projet WebGL autour de « Le Cri » d’Edvard Munch est une démonstration complète d’intégration artistique et technologique. Il associe modélisation 3D, programmation, esthétique web, effets visuels avancés et interaction utilisateur pour créer une expérience immersive unique.
                 </p>
             </section>

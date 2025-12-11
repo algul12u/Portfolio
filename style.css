@@ -1310,7 +1310,17 @@ input, textarea, .selectable {
 
   /* Header & Nav - Switch to Burger Menu earlier */
   .header-container {
-    padding: 0 1.5rem;
+    padding: 0 1rem; /* Reduced padding to move logo left */
+  }
+
+  /* Mobile Logo Adjustments */
+  .logo img {
+      height: 50px; /* Adjusted to fit mobile header */
+  }
+
+  .logo {
+      font-size: 1.4rem; /* Adjusted text size */
+      gap: 0.5rem;
   }
 
   .mobile-toggle {
@@ -1336,7 +1346,9 @@ input, textarea, .selectable {
 
   .nav.active {
     height: 100vh; /* Full screen menu */
-    max-height: 400px; 
+    max-height: 100vh; /* Allow full height */
+    overflow-y: auto; /* Allow scrolling if needed */
+    padding-bottom: 2rem; /* Add padding for scrolling */
   }
 
   .nav-list {
@@ -1437,7 +1449,20 @@ input, textarea, .selectable {
     padding: 1rem 2rem;
 }
 
+
 .btn-hero-more {
     margin-left: 1.5rem;
     font-weight: 600;
+}
+
+/* Utility Classes */
+.page-subtitle {
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hobby-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
 }
