@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;">
+    
+    <title>Détails Projet: Simple Pinball | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="DataSpaceSefer Logo" class="logo-img">
+                DataSpace<span class="highlight">Sefer</span>
+            </a>
+            
+            <button class="mobile-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link">À Propos</a></li>
+                    <li><a href="skills.html" class="nav-link">Compétences</a></li>
+                    <li><a href="projects.html" class="nav-link active">Projets</a></li>
+                    <li><a href="contact.html" class="cta-btn">Me Contacter</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container section">
+        <!-- Back Button -->
+        <div style="margin-bottom: 2rem;">
+            <a href="projects.html" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-secondary); font-weight: 500;">
+                <i class="fas fa-arrow-left"></i> Retour aux projets
+            </a>
+        </div>
+
+        <!-- Project Header -->
+        <div class="page-header" style="text-align: left; padding: 0 0 3rem;">
+            <h1 class="page-title" style="font-size: 2.5rem; margin-bottom: 1rem;">
+                Simple <span class="highlight">Pinball</span> – Jeu Unity WebGL
+            </h1>
+            <div class="project-tech" style="margin-bottom: 2rem;">
+                <span><i class="fab fa-unity"></i> Unity</span>
+                <span><i class="fas fa-cube"></i> WebGL</span>
+                <span><i class="fas fa-code"></i> C#</span>
+            </div>
+            <p style="color: var(--text-secondary); max-width: 800px; font-size: 1.1rem; line-height: 1.6;">
+                Ce projet consiste en la création et la mise en ligne d’un jeu de flipper ("Pinball") développé avec Unity et rendu accessible directement depuis un navigateur grâce à une exportation en WebGL. L’objectif principal était de proposer une expérience de jeu simple, fluide et universelle, sans nécessiter aucune installation pour l’utilisateur.
+            </p>
+            <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                <a href="flipper.html" class="cta-btn">
+                    <i class="fas fa-play"></i> Jouer Maintenant
+                </a>
+            </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div style="display: grid; grid-template-columns: 1fr; gap: 3rem;">
+            
+            <!-- Objectifs -->
+            <section style="background: var(--card-bg); padding: 2.5rem; border-radius: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--card-border);">
+                <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                    <i class="fas fa-bullseye" style="color: var(--accent-color);"></i> Objectifs du projet
+                </h2>
+                <ul style="list-style: none; display: grid; gap: 1rem;">
+                    <li style="display: flex; gap: 1rem; align-items: start;">
+                        <span>Concevoir un jeu complet et fonctionnel avec Unity.</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; align-items: start;">
+                        <span>Exporter le jeu en WebGL pour une compatibilité web optimale.</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; align-items: start;">
+                        <span>Intégrer ce build WebGL dans une page HTML personnalisée.</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; align-items: start;">
+                        <span>Gérer l’affichage responsive (mobile/desktop).</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; align-items: start;">
+                        <span>Offrir une interface épurée, centrée sur l’expérience de jeu.</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Concept & Intégration -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem;">
+                 <!-- Concept -->
+                <section style="background: #fff; padding: 2rem; border-radius: 16px; border: 1px solid var(--card-border);">
+                    <h2 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.8rem;">
+                        <i class="fas fa-gamepad" style="color: var(--accent-color);"></i> Concept du jeu
+                    </h2>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                        Le jeu est une version simplifiée d’un flipper où le joueur contrôle deux flippers pour garder la bille en jeu. La physique est entièrement gérée par le moteur Unity.
+                    </p>
+                    <ul style="list-style: disc; margin-left: 1.5rem; color: var(--text-secondary); gap: 0.5rem; display: flex; flex-direction: column;">
+                        <li>Contrôles réactifs</li>
+                        <li>Physique réaliste</li>
+                        <li>Prise en main immédiate</li>
+                        <li>Expérience de divertissement rapide</li>
+                    </ul>
+                </section>
+
+                <!-- WebGL -->
+                <section style="background: #fff; padding: 2rem; border-radius: 16px; border: 1px solid var(--card-border);">
+                    <h2 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.8rem;">
+                        <i class="fas fa-globe" style="color: var(--accent-color);"></i> Intégration WebGL
+                    </h2>
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                        L'intégration permet le chargement du moteur Unity directement dans le navigateur via WebAssembly (WASM), offrant des performances proches du natif.
+                    </p>
+                    <ul style="list-style: disc; margin-left: 1.5rem; color: var(--text-secondary); gap: 0.5rem; display: flex; flex-direction: column;">
+                        <li>Chargement automatique du moteur</li>
+                        <li>Affichage dans un canvas dédié</li>
+                        <li>Aucun plugin requis</li>
+                        <li>Compatibilité multi-plateforme</li>
+                    </ul>
+                </section>
+            </div>
+
+            <!-- Interface Visuelle -->
+             <section style="background: var(--card-bg); padding: 2.5rem; border-radius: 20px; border: 1px solid var(--card-border);">
+                <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                    <i class="fas fa-paint-brush" style="color: var(--accent-color);"></i> Interface Visuelle
+                </h2>
+                <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.6; margin-bottom: 1rem;">
+                    L’interface est conçue pour être simple et immersive : une zone de jeu centrée sur une page épurée, sans distraction. Cette approche minimaliste renforce la lisibilité et optimise les performances de l'application, permettant au joueur de se concentrer uniquement sur le score.
+                </p>
+            </section>
+
+            <!-- Tech Stack Detailed -->
+            <section style="background: #fff; padding: 2rem; border-radius: 20px; border: 1px solid var(--card-border);">
+                <h2 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 0.8rem;">
+                    <i class="fas fa-tools" style="color: var(--accent-color);"></i> Technologies & Compétences
+                </h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                    <div>
+                        <h4 style="font-weight: 700; margin-bottom: 0.8rem; color: var(--text-primary);">Unity</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Création du gameplay, physique, gestion des scènes et exportation.</p>
+                    </div>
+                    <div>
+                         <h4 style="font-weight: 700; margin-bottom: 0.8rem; color: var(--text-primary);">WebGL</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Technologie de rendu web haute performance via WebAssembly.</p>
+                    </div>
+                    <div>
+                         <h4 style="font-weight: 700; margin-bottom: 0.8rem; color: var(--text-primary);">Intégration Web</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Communication entre Unity et le DOM, gestion responsive et déploiement.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conclusion -->
+            <section style="text-align: center; margin-top: 2rem; background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(20, 184, 166, 0.1) 100%); padding: 3rem; border-radius: 20px;">
+                <h2 style="margin-bottom: 1rem; font-family: var(--font-heading);">Conclusion</h2>
+                <p style="color: var(--text-primary); max-width: 700px; margin: 0 auto; font-size: 1.1rem;">
+                    <strong>Simple Pinball</strong> est un projet qui combine créativité et compétences techniques modernes. Jouable instantanément depuis n’importe quel navigateur, ce flipper démontre une utilisation efficace d’Unity et du déploiement web, prouvant la capacité à délivrer des expériences interactives fluides sur le web.
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="security.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

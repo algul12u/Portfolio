@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;">
+    
+    <title>Détails Projet: Le Cri WebGL | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="DataSpaceSefer Logo" class="logo-img">
+                DataSpace<span class="highlight">Sefer</span>
+            </a>
+            
+            <button class="mobile-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link">À Propos</a></li>
+                    <li><a href="skills.html" class="nav-link">Compétences</a></li>
+                    <li><a href="projects.html" class="nav-link active">Projets</a></li>
+                    <li><a href="contact.html" class="cta-btn">Me Contacter</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container section">
+        <!-- Back Button -->
+        <div style="margin-bottom: 2rem;">
+            <a href="projects.html" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-secondary); font-weight: 500;">
+                <i class="fas fa-arrow-left"></i> Retour aux projets
+            </a>
+        </div>
+
+        <!-- Project Header -->
+        <div class="page-header" style="text-align: left; padding: 0 0 3rem;">
+            <h1 class="page-title" style="font-size: 2.5rem; margin-bottom: 1rem;">
+                Le Cri – Expérience <span class="highlight">Interactive WebGL</span>
+            </h1>
+            <div class="project-tech" style="margin-bottom: 2rem;">
+                <span><i class="fas fa-cube"></i> Three.js</span>
+                <span><i class="fas fa-code"></i> WebGL</span>
+                <span><i class="fas fa-paint-brush"></i> Blender</span>
+            </div>
+            <p style="color: var(--text-secondary); max-width: 800px; font-size: 1.1rem; line-height: 1.6;">
+                Ce projet consiste en la création d’une scène 3D complète et interactive réalisée en WebGL via Three.js, intégrée dans une page web conçue pour mettre en valeur une œuvre emblématique : Le Cri d’Edvard Munch. L’objectif était de transformer un tableau iconique en une expérience numérique immersive.
+            </p>
+            <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                <a href="https://med-css.github.io/LeCri-Munch/" class="cta-btn">
+                    <i class="fas fa-eye"></i> Voir le Projet
+                </a>
+            </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div style="display: grid; grid-template-columns: 1fr; gap: 3rem;">
+            
+            <!-- Objectifs -->
+            <section style="background: var(--card-bg); padding: 2.5rem; border-radius: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--card-border);">
+                <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                    <i class="fas fa-bullseye" style="color: var(--accent-color);"></i> Objectifs du projet
+                </h2>
+                <ul style="list-style: none; display: grid; gap: 1rem;">
+                    <li style="display: flex; gap: 1rem; align-items: start;">
+                        <span>Recréer une ambiance 3D inspirée du tableau Le Cri, en respectant son atmosphère visuelle.</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; align-items: start;">
+                        <span>Concevoir une scène WebGL esthétique, fluide et optimisée pour le navigateur.</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; align-items: start;">
+                        <span>Intégrer différents modèles 3D, textures et effets graphiques avancés.</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; align-items: start;">
+                        <span>Permettre à l’utilisateur d’interagir avec la scène via des contrôles caméra et une interface GUI.</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; align-items: start;">
+                        <span>Illustrer la compréhension des technologies Three.js, GLTF, OBJ, éclairage et post-traitement.</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Concept -->
+            <section>
+                 <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;">
+                    <i class="fas fa-lightbulb" style="color: var(--accent-color);"></i> Concept Général
+                </h2>
+                <div style="background: #fff; padding: 2rem; border-radius: 16px; border: 1px solid var(--card-border);">
+                    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                        L’utilisateur découvre une scène vaste et atmosphérique composée d’un environnement aquatique animé, de ponts 3D rappelant les passerelles du tableau original, de bateaux en mouvement, et d’un modèle 3D du personnage du Cri, mis en lumière comme une œuvre de musée.
+                    </p>
+                     <p style="color: var(--text-secondary); line-height: 1.6;">
+                        Une skybox immersive enveloppe toute la scène dans un ciel artistique, accompagnée d’effets visuels tels que brouillard, reflets au sol, textures spéculaires et jeu d’ombres réaliste.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Caractéristiques -->
+            <section>
+                <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;">
+                    <i class="fas fa-laptop-code" style="color: var(--accent-color);"></i> Caractéristiques Principales
+                </h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                    <!-- Immersion -->
+                    <div style="background: var(--card-bg); padding: 2rem; border-radius: 16px; border: 1px solid var(--card-border);">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-primary);">1. Scène 3D Immersive</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                            L’environnement est conçu pour envelopper le spectateur dans une ambiance rappelant l’expressivité du tableau. La skybox et les textures renforcent cette immersion.
+                        </p>
+                    </div>
+
+                    <!-- Eclairage -->
+                    <div style="background: var(--card-bg); padding: 2rem; border-radius: 16px; border: 1px solid var(--card-border);">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-primary);">2. Système d’Éclairage Sophistiqué</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                            Plusieurs sources de lumière coexistent : un soleil directionnel pour les ombres dramatiques, une lumière ambiante douce, et un spotlight focalisé sur le modèle.
+                        </p>
+                    </div>
+
+                    <!-- Effets -->
+                    <div style="background: var(--card-bg); padding: 2rem; border-radius: 16px; border: 1px solid var(--card-border);">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-primary);">3. Effets Avancés</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                            Brouillard progressif pour la profondeur, matériaux transparents pour l'eau, et effets miroirs pour un rendu élégant et artistique.
+                        </p>
+                    </div>
+
+                    <!-- Eau -->
+                    <div style="background: var(--card-bg); padding: 2rem; border-radius: 16px; border: 1px solid var(--card-border);">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-primary);">4. Eau Dynamique</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                            Une large étendue d’eau travaillée avec texture répétée, specular map, brillance réglable et transparence contrôlée.
+                        </p>
+                    </div>
+                     <!-- Animation -->
+                    <div style="background: var(--card-bg); padding: 2rem; border-radius: 16px; border: 1px solid var(--card-border);">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-primary);">5. Animation Fluide</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                             Objets 3D (bateaux) en mouvement sur des trajectoires calculées en temps réel, démontrant une gestion stable de l'animation JS.
+                        </p>
+                    </div>
+                     <!-- GUI -->
+                    <div style="background: var(--card-bg); padding: 2rem; border-radius: 16px; border: 1px solid var(--card-border);">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--text-primary);">6. Interface GUI</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                            Interface dat.GUI permettant de modifier en temps réel le zoom, le brouillard, les lumières et les propriétés de l'eau.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Compétences Demonstrées -->
+             <section style="background: #fff; padding: 2.5rem; border-radius: 20px; border: 1px solid var(--card-border);">
+                <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                    <i class="fas fa-graduation-cap" style="color: var(--accent-color);"></i> Compétences Démontrées
+                </h2>
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                     <span style="background: #f1f5f9; padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 500; color: var(--text-primary);">WebGL & Three.js</span>
+                     <span style="background: #f1f5f9; padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 500; color: var(--text-primary);">Infographie 3D</span>
+                     <span style="background: #f1f5f9; padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 500; color: var(--text-primary);">Développement Web Moderne</span>
+                     <span style="background: #f1f5f9; padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 500; color: var(--text-primary);">Textures & Matériaux</span>
+                     <span style="background: #f1f5f9; padding: 0.6rem 1.2rem; border-radius: 50px; font-weight: 500; color: var(--text-primary);">Éclairage Avancé</span>
+                </div>
+            </section>
+
+            <!-- Conclusion -->
+            <section style="text-align: center; margin-top: 2rem; background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(20, 184, 166, 0.1) 100%); padding: 3rem; border-radius: 20px;">
+                <h2 style="margin-bottom: 1rem; font-family: var(--font-heading);">Conclusion</h2>
+                <p style="color: var(--text-primary); max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+                    Ce projet WebGL autour de « Le Cri » d’Edvard Munch est une démonstration complète d’intégration artistique et technologique. Il associe modélisation 3D, programmation, esthétique web, effets visuels avancés et interaction utilisateur pour créer une expérience immersive unique.
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="security.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

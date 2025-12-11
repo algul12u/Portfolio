@@ -1,0 +1,44 @@
+╔════════════════════════════════════════════════════════════╗
+║  🖐️  MINI-PROJET : DÉTECTION DES MAINS                    ║
+╚════════════════════════════════════════════════════════════╝
+
+✅ INSTALLATION TERMINÉE !
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 LANCEMENT RAPIDE :
+
+   ./run.sh
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📁 FICHIERS DU PROJET :
+
+   ✓ hand_detection.py     → Programme principal
+   ✓ run.sh                → Lancement facile  
+   ✓ README.md             → Documentation
+   ✓ RAPPORT.md            → Rapport technique
+   ✓ venv_mediapipe/       → Environnement Python
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 FONCTIONNALITÉS :
+
+   ✅ Détection précise (IA Google MediaPipe)
+   ✅ Squelette 21 points
+   ✅ Comptage des doigts (0-5)
+   ✅ Temps réel 30+ FPS
+   ✅ Multi-mains (jusqu'à 2)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 UTILISATION :
+
+   1. Lance : ./run.sh
+   2. Place ta main devant la webcam
+   3. Lève tes doigts
+   4. Appuie sur 'q' pour quitter
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Bon projet ! 🚀

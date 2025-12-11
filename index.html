@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <!-- CSP: Allow self, CDNs, and inline styles/scripts for functionality -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;">
+    <title data-i18n="nav.home">Accueil | Portfolio Étudiant</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Background Blobs -->
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <span class="typewriter"></span>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="DataSpaceSefer Logo" class="logo-img">
+                DataSpace<span class="highlight">Sefer</span>
+            </a>
+
+            <button class="mobile-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav.about">À Propos</a></li>
+                    <li><a href="skills.html" class="nav-link" data-i18n="nav.skills">Compétences</a></li>
+                    <li><a href="projects.html" class="nav-link" data-i18n="nav.projects">Projets</a></li>
+                    <li><a href="contact.html" class="cta-btn" data-i18n="nav.contact">Me Contacter</a></li>
+                </ul>
+
+                <!-- LANGUAGE SWITCHER -->
+                <div class="language-selector">
+    <div class="selected-lang">
+        <img src="https://flagcdn.com/w40/fr.png" class="lang-flag" id="current-flag" alt="FR">
+        <span id="current-lang">FR</span>
+        <i class="fas fa-chevron-down lang-chevron"></i>
+    </div>
+
+    <div class="lang-dropdown">
+        <a href="#" class="lang-option" data-lang="fr">
+            <img src="https://flagcdn.com/w40/fr.png" class="lang-flag" alt="Drapeau Français"> FR
+        </a>
+        <a href="#" class="lang-option" data-lang="tr">
+            <img src="https://flagcdn.com/w40/tr.png" class="lang-flag" alt="Drapeau Turc"> TR
+        </a>
+        <a href="#" class="lang-option" data-lang="en">
+            <img src="https://flagcdn.com/w40/gb.png" class="lang-flag" alt="Drapeau Anglais"> EN
+        </a>
+        <a href="#" class="lang-option" data-lang="de">
+            <img src="https://flagcdn.com/w40/de.png" class="lang-flag" alt="Drapeau Allemand"> DE
+        </a>
+    </div>
+</div>
+
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+
+                <!-- LEFT : TEXT -->
+                <div class="hero-content">
+                    <h1 class="hero-title" data-i18n="hero.title">
+                        Je suis Algul Sefer, <br>futur développeur .
+                    </h1>
+
+                    <p class="hero-text" data-i18n="hero.subtitle">
+                        Actuellement étudiant en 3ème année de BUT Informatique. J'aime concevoir des applications utiles et résoudre des problèmes grâce au code.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="projects.html" class="cta-btn btn-hero-cta" data-i18n="hero.cta">
+                            Voir mes travaux
+                        </a>
+                        <a href="about.html" class="nav-link btn-hero-more" data-i18n="hero.more">
+                            En savoir plus →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- RIGHT : VISUAL -->
+                <div class="hero-visual">
+                    <div class="shape-box">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="security.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{
+    "nav": {
+        "home": "Accueil",
+        "about": "À Propos",
+        "skills": "Compétences",
+        "projects": "Projets",
+        "contact": "Me Contacter"
+    },
+    "hero": {
+        "title": "Je suis Algul Sefer, <br>futur développeur.",
+        "subtitle": "Actuellement étudiant en 3ème année de BUT Informatique. J'aime concevoir des applications utiles et résoudre des problèmes grâce au code.",
+        "cta": "Voir mes travaux",
+        "more": "En savoir plus →"
+    },
+    "about": {
+        "title": "Qui suis-je <span class='highlight'>?</span>",
+        "subtitle": "Un aperçu de mon parcours, de mes passions et de ce qui me motive au quotidien.",
+        "p1": "Salut ! Moi c'est <strong>Algul Sefer</strong>. Je suis actuellement en <strong>3ème année de BUT Informatique</strong>. J'ai toujours été intéressé par la technologie, et coder est devenu pour moi un moyen de créer des choses concrètes.",
+        "p2": "J'aime toucher à tout : du développement d'interfaces web dynamiques à la gestion de bases de données, en passant par la création d'applications mobiles ou de jeux.",
+        "p3": "Mon objectif est de continuer à apprendre et de travailler sur des projets qui ont du sens. Je suis quelqu'un de curieux, motivé et j'aime travailler en équipe."
+    },
+    "skills": {
+        "subtitle": "Les technologies et langages que j'utilise pour donner vie à mes idées.",
+        "cat_lang": "Langages",
+        "cat_db": "Bases de Données",
+        "cat_fw": "Frameworks",
+        "cat_tools": "Outils & Autres"
+    },
+    "projects": {
+        "subtitle": "Une sélection de mes travaux académiques et personnels les plus significatifs.",
+        "flipper_title": "Jeu Flipper (Unity)",
+        "flipper_desc": "Un jeu de Flipper 3D développé avec le moteur Unity. Physique réaliste, score en temps réel et effets sonores immersifs.",
+        "play_btn": "Jouer Maintenant"
+    },
+    "contact": {
+        "subtitle": "Une question, une proposition ou juste envie d'échanger ? Je suis à votre écoute.",
+        "name": "Votre Nom",
+        "email": "Votre Email",
+        "message": "Message",
+        "send_btn": "Envoyer le message"
+    }
+}

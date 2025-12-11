@@ -1,0 +1,45 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact Me"
+    },
+    "hero": {
+        "title": "I am Algul Sefer, <br>A Developer in the making.",
+        "subtitle": "Currently a 3rd year Computer Science student. I enjoy creating useful applications and solving problems through code.",
+        "cta": "View my work",
+        "more": "Learn more →"
+    },
+    "about": {
+        "title": "Who am I <span class='highlight'>?</span>",
+        "subtitle": "An insight into my background, passions and what motivates me.",
+        "p1": "Hi! I'm <strong>Algul Sefer</strong>. I'm currently in my <strong>3rd year of Computer Science</strong>. Technology has always fascinated me, and coding became a way to create real things.",
+        "p2": "I love working on everything: from dynamic web interfaces to database management, mobile apps or even games.",
+        "p3": "My goal is to keep learning and work on meaningful projects. I’m curious, motivated and I enjoy teamwork."
+    },
+    "skills": {
+        "title": "My <span class='highlight'>Tools</span>",
+        "subtitle": "The technologies and languages I use to bring ideas to life.",
+        "cat_lang": "Languages",
+        "cat_db": "Databases",
+        "cat_fw": "Frameworks",
+        "cat_tools": "Tools & Others"
+    },
+    "projects": {
+        "title": "My <span class='highlight'>Projects</span>",
+        "subtitle": "A selection of my most significant academic and personal work.",
+        "flipper_title": "Pinball Game (Unity)",
+        "flipper_desc": "A 3D pinball game developed with Unity. Realistic physics, live scoring and immersive sound effects.",
+        "play_btn": "Play Now"
+    },
+    "contact": {
+        "title": "Let's Get in <span class='highlight'>Touch</span>",
+        "subtitle": "A question, an offer or just want to talk? I'm listening.",
+        "name": "Your Name",
+        "email": "Your Email",
+        "message": "Message",
+        "send_btn": "Send Message"
+    }
+}

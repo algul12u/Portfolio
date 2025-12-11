@@ -1,0 +1,45 @@
+{
+    "nav": {
+        "home": "Ana Sayfa",
+        "about": "Hakkımda",
+        "skills": "Yetenekler",
+        "projects": "Projeler",
+        "contact": "İletişim"
+    },
+    "hero": {
+        "title": "Ben Algül Sefer, <br>Geleceğin Yazılımcısı.",
+        "subtitle": "Şu anda BUT Bilgisayar Bilimleri 3. sınıf öğrencisiyim. Kodlama ile faydalı uygulamalar tasarlamayı ve problem çözmeyi seviyorum.",
+        "cta": "Projelerimi Gör",
+        "more": "Daha fazla bilgi →"
+    },
+    "about": {
+        "title": "Ben Kimim <span class='highlight'>?</span>",
+        "subtitle": "Geçmişim, tutkularım ve beni motive eden şeyler hakkında kısa bir bakış.",
+        "p1": "Merhaba! Ben <strong>Algül Sefer</strong>. Şu anda <strong>BUT Bilgisayar Bilimleri 3. sınıf</strong> öğrencisiyim. Teknolojiye her zaman ilgi duydum ve kodlama benim için somut şeyler yaratmanın bir yolu haline geldi.",
+        "p2": "Her şeye dokunmayı seviyorum: dinamik web arayüzleri geliştirmekten veritabanı yönetimine, mobil uygulamalar veya oyunlar oluşturmaya kadar.",
+        "p3": "Hedefim öğrenmeye devam etmek ve anlamlı projeler üzerinde çalışmak. Meraklı, motive biriyim ve takım çalışmasını severim."
+    },
+    "skills": {
+        "title": "Kullandığım <span class='highlight'>Araçlar</span>",
+        "subtitle": "Fikirlerimi hayata geçirmek için kullandığım teknolojiler ve diller.",
+        "cat_lang": "Diller",
+        "cat_db": "Veri Tabanları",
+        "cat_fw": "Frameworks",
+        "cat_tools": "Araçlar & Diğerleri"
+    },
+    "projects": {
+        "title": "Yaptığım <span class='highlight'>Projeler</span>",
+        "subtitle": "En önemli akademik ve kişisel çalışmalarımın bir seçkisi.",
+        "flipper_title": "Flipper Oyunu (Unity)",
+        "flipper_desc": "Unity motoru ile geliştirilmiş 3D Flipper oyunu. Gerçekçi fizik, gerçek zamanlı skor ve sürükleyici ses efektleri.",
+        "play_btn": "Şimdi Oyna"
+    },
+    "contact": {
+        "title": "İletişime <span class='highlight'>Geçelim</span>",
+        "subtitle": "Bir soru, bir teklif veya sadece sohbet etmek mi istiyorsunuz? Sizi dinliyorum.",
+        "name": "Adınız",
+        "email": "E-posta Adresiniz",
+        "message": "Mesajınız",
+        "send_btn": "Mesajı Gönder"
+    }
+}

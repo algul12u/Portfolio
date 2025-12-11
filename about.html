@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;">
+    <title>À Propos | Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="DataSpaceSefer Logo" class="logo-img">
+                DataSpace<span class="highlight">Sefer</span>
+            </a>
+            
+            <button class="mobile-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link active" data-i18n="nav.about">À Propos</a></li>
+                    <li><a href="skills.html" class="nav-link" data-i18n="nav.skills">Compétences</a></li>
+                    <li><a href="projects.html" class="nav-link" data-i18n="nav.projects">Projets</a></li>
+                    <li><a href="contact.html" class="cta-btn" data-i18n="nav.contact">Me Contacter</a></li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+    <main class="container section">
+        <div class="page-header">
+            <h1 class="page-title" data-i18n="about.title">Qui suis-je <span class="highlight">?</span></h1>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;" data-i18n="about.subtitle">
+                Un aperçu de mon parcours, de mes passions et de ce qui me motive au quotidien.
+            </p>
+        </div>
+
+        <div class="about-container">
+            <div class="about-text">
+                <p data-i18n="about.p1">
+                    Salut ! Moi c'est <strong>Algul Sefer</strong>. Je suis actuellement en <strong>3ème année de BUT Informatique</strong>. J'ai toujours été intéressé par la technologie, et coder est devenu pour moi un moyen de créer des choses concrètes.
+                </p>
+                <p data-i18n="about.p2">
+                    J'aime toucher à tout : du développement d'interfaces web dynamiques à la gestion de bases de données, en passant par la création d'applications mobiles ou de jeux.
+                </p>
+                <p data-i18n="about.p3">
+                    Mon objectif est de continuer à apprendre et de travailler sur des projets qui ont du sens. Je suis quelqu'un de curieux, motivé et j'aime travailler en équipe.
+                </p>
+            </div>
+
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Jeux Vidéo</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">Stratégie & Sport</p>
+                </div>
+                <div class="hobby-card">
+                    <i class="fas fa-music"></i>
+                    <h3>Musique</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">Écoute</p>
+                </div>
+
+                <div class="hobby-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Tech</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">Nouvelles technos</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="security.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

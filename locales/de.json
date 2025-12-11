@@ -1,0 +1,45 @@
+{
+    "nav": {
+        "home": "Startseite",
+        "about": "Über mich",
+        "skills": "Fähigkeiten",
+        "projects": "Projekte",
+        "contact": "Kontakt"
+    },
+    "hero": {
+        "title": "Ich bin Algul Sefer, <br>ein Entwickler im Werden.",
+        "subtitle": "Zurzeit bin ich Informatikstudent im 3. Jahr. Ich entwickle gerne nützliche Anwendungen und löse Probleme durch Code.",
+        "cta": "Meine Arbeiten ansehen",
+        "more": "Mehr erfahren →"
+    },
+    "about": {
+        "title": "Wer bin ich <span class='highlight'>?</span>",
+        "subtitle": "Ein Einblick in meinen Werdegang, meine Leidenschaften und meine Motivation.",
+        "p1": "Hallo! Ich bin <strong>Algul Sefer</strong>. Ich studiere derzeit im <strong>3. Jahr Informatik</strong>. Technologie hat mich schon immer fasziniert, und Programmieren ermöglicht mir, echte Dinge zu schaffen.",
+        "p2": "Ich arbeite gerne an allem: von dynamischen Weboberflächen über Datenbanken bis hin zu mobilen Apps und Spielen.",
+        "p3": "Mein Ziel ist es, weiter zu lernen und an sinnvollen Projekten zu arbeiten. Ich bin neugierig, motiviert und arbeite gerne im Team."
+    },
+    "skills": {
+        "title": "Meine <span class='highlight'>Werkzeuge</span>",
+        "subtitle": "Die Technologien und Sprachen, die ich verwende, um meine Ideen umzusetzen.",
+        "cat_lang": "Sprachen",
+        "cat_db": "Datenbanken",
+        "cat_fw": "Frameworks",
+        "cat_tools": "Werkzeuge & Sonstiges"
+    },
+    "projects": {
+        "title": "Meine <span class='highlight'>Projekte</span>",
+        "subtitle": "Eine Auswahl meiner wichtigsten akademischen und persönlichen Arbeiten.",
+        "flipper_title": "Flipper-Spiel (Unity)",
+        "flipper_desc": "Ein 3D-Flipper-Spiel, entwickelt mit Unity. Realistische Physik, Live-Score und eindrucksvolle Soundeffekte.",
+        "play_btn": "Jetzt spielen"
+    },
+    "contact": {
+        "title": "Kontakt <span class='highlight'>aufnehmen</span>",
+        "subtitle": "Eine Frage, ein Angebot oder einfach Lust zu reden? Ich bin da.",
+        "name": "Ihr Name",
+        "email": "Ihre E-Mail",
+        "message": "Nachricht",
+        "send_btn": "Nachricht senden"
+    }
+}

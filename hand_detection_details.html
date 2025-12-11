@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;">
+    
+    <title>Détails Projet: Détection des Mains | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="DataSpaceSefer Logo" class="logo-img">
+                DataSpace<span class="highlight">Sefer</span>
+            </a>
+            
+            <button class="mobile-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link">À Propos</a></li>
+                    <li><a href="skills.html" class="nav-link">Compétences</a></li>
+                    <li><a href="projects.html" class="nav-link active">Projets</a></li>
+                    <li><a href="contact.html" class="cta-btn">Me Contacter</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container section">
+        <!-- Back Button -->
+        <div style="margin-bottom: 2rem;">
+            <a href="projects.html" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-secondary); font-weight: 500;">
+                <i class="fas fa-arrow-left"></i> Retour aux projets
+            </a>
+        </div>
+
+        <!-- Project Header -->
+        <div class="page-header" style="text-align: left; padding: 0 0 3rem;">
+            <h1 class="page-title" style="font-size: 2.5rem; margin-bottom: 1rem;">
+                Détection en temps réel des <span class="highlight">mains</span> et comptage des <span class="highlight">doigts</span>
+            </h1>
+            <div class="project-tech" style="margin-bottom: 2rem;">
+                <span><i class="fab fa-python"></i> Python</span>
+                <span><i class="fas fa-camera"></i> OpenCV</span>
+                <span><i class="fas fa-hand-paper"></i> MediaPipe</span>
+            </div>
+            <p style="color: var(--text-secondary); max-width: 800px; font-size: 1.1rem; line-height: 1.6;">
+                Ce projet consiste à développer une application complète de détection des mains, de reconnaissance du squelette (landmarks) et de comptage automatique des doigts levés en temps réel à partir d’une webcam. L’application repose sur l’utilisation combinée de deux bibliothèques puissantes : <strong>MediaPipe</strong> et <strong>OpenCV</strong>.
+            </p>
+            <div style="margin-top: 2rem; display: flex; gap: 1rem;">
+                <a href="hand_detection.html" class="cta-btn">
+                    <i class="fas fa-play"></i> Tester la Démo Live
+                </a>
+            </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div style="display: grid; grid-template-columns: 1fr; gap: 3rem;">
+            
+            <!-- Objectifs -->
+            <section style="background: var(--card-bg); padding: 2.5rem; border-radius: 20px; box-shadow: var(--shadow-sm); border: 1px solid var(--card-border);">
+                <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                    <i class="fas fa-bullseye" style="color: var(--accent-color);"></i> Objectifs du projet
+                </h2>
+                <ul style="list-style: none; display: grid; gap: 1rem;">
+                    <li style="display: flex; gap: 1rem; align-items: start;">
+                        <span>Détecter automatiquement une ou plusieurs mains dans un flux vidéo.</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; align-items: start;">
+                        <span>Extraire la position exacte des <strong>21 points clés</strong> ("landmarks") de la main.</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; align-items: start;">
+                        <span>Déterminer quels doigts sont levés grâce à une analyse géométrique précise.</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; align-items: start;">
+                        <span>Afficher dynamiquement les squelettes, les noms des doigts levés et la distance entre points (ex: pouce-index).</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Architecture -->
+            <section>
+                <h2 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;">
+                    <i class="fas fa-brain" style="color: var(--accent-color);"></i> Architecture et Fonctionnement
+                </h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <!-- Step 1 -->
+                    <div style="background: #fff; padding: 2rem; border-radius: 16px; border: 1px solid var(--card-border);">
+                        <div style="background: rgba(14, 165, 233, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                            <span style="font-weight: 700; color: var(--accent-color); font-size: 1.2rem;">1</span>
+                        </div>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Initialisation</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                            Configuration de la classe <code>HandDetector</code> avec MediaPipe Hands. Paramètres ajustables : mode statique/dynamique, nombre de mains max, et seuils de confiance pour une détection robuste.
+                        </p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div style="background: #fff; padding: 2rem; border-radius: 16px; border: 1px solid var(--card-border);">
+                        <div style="background: rgba(14, 165, 233, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                            <span style="font-weight: 700; color: var(--accent-color); font-size: 1.2rem;">2</span>
+                        </div>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Détection & Landmarks</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                            La méthode <code>find_hands()</code> analyse l'image et dessine le squelette. <code>find_position()</code> extrait les coordonnées (x, y) des 21 points clés pour chaque main, indispensable pour l'analyse spatiale.
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div style="background: #fff; padding: 2rem; border-radius: 16px; border: 1px solid var(--card-border);">
+                        <div style="background: rgba(14, 165, 233, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                            <span style="font-weight: 700; color: var(--accent-color); font-size: 1.2rem;">3</span>
+                        </div>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Analyse des Doigts</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                            La méthode <code>fingers_up()</code> compare la position des extrémités des doigts par rapport aux articulations pour déterminer s'ils sont levés ou baissés (logique spécifique pour le pouce).
+                        </p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div style="background: #fff; padding: 2rem; border-radius: 16px; border: 1px solid var(--card-border);">
+                        <div style="background: rgba(14, 165, 233, 0.1); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                            <span style="font-weight: 700; color: var(--accent-color); font-size: 1.2rem;">4</span>
+                        </div>
+                        <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">Distance & Interaction</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                            Calcul dynamique de la distance entre deux points (ex: pincement pouce-index) avec <code>find_distance()</code>, ouvrant la voie à des contrôles gestuels avancés (zoom, validation).
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interface & Tech -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <section style="background: var(--card-bg); padding: 2rem; border-radius: 20px; border: 1px solid var(--card-border);">
+                    <h3 style="font-family: var(--font-heading); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.8rem;">
+                        <i class="fas fa-desktop" style="color: var(--accent-color);"></i> Interface Temps Réel
+                    </h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                        Grâce à OpenCV, l'application offre une expérience fluide avec retour visuel immédiat :
+                    </p>
+                    <ul style="color: var(--text-secondary); padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                        <li>Flux vidéo HD constant</li>
+                        <li>Tracé des squelettes en couleur</li>
+                        <li>Panneau d'état des doigts (Levé/Baissé)</li>
+                        <li>Compteur total de doigts</li>
+                    </ul>
+                </section>
+
+                <section style="background: var(--card-bg); padding: 2rem; border-radius: 20px; border: 1px solid var(--card-border);">
+                    <h3 style="font-family: var(--font-heading); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.8rem;">
+                        <i class="fas fa-rocket" style="color: var(--accent-color);"></i> Applications Possibles
+                    </h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem;">
+                        <span style="background: #f1f5f9; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.9rem; color: var(--text-primary);">Contrôle sans contact</span>
+                        <span style="background: #f1f5f9; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.9rem; color: var(--text-primary);">Jeux gestuels</span>
+                        <span style="background: #f1f5f9; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.9rem; color: var(--text-primary);">Langue des signes (LSF)</span>
+                        <span style="background: #f1f5f9; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.9rem; color: var(--text-primary);">Domotique</span>
+                        <span style="background: #f1f5f9; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.9rem; color: var(--text-primary);">AR / VR</span>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Conclusion -->
+            <section style="text-align: center; margin-top: 2rem; background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(20, 184, 166, 0.1) 100%); padding: 3rem; border-radius: 20px;">
+                <h2 style="margin-bottom: 1rem; font-family: var(--font-heading);">Conclusion</h2>
+                <p style="color: var(--text-primary); max-width: 700px; margin: 0 auto; font-size: 1.1rem;">
+                    Ce projet démontre une maîtrise solide du traitement d’image temps réel et de l’IA appliquée au computer vision. 
+                    Il constitue un socle robuste, performant et modulaire pour de futures évolutions interactives.
+                </p>
+            </section>
+
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="security.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

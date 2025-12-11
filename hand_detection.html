@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détection des Mains | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- MediaPipe Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+
+    <style>
+        .demo-container {
+            position: relative;
+            width: 100%;
+            max-width: 1280px;
+            margin: 2rem auto;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 0 30px rgba(79, 70, 229, 0.3);
+        }
+
+        .video-output {
+            display: none; /* Hide the raw video, we draw on canvas */
+        }
+
+        .canvas-output {
+            width: 100%;
+            height: auto;
+            display: block;
+            transform: scaleX(-1); /* Mirror effect like the python script usually implies/feels better */
+        }
+
+        .controls-overlay {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 12px;
+            pointer-events: none; /* Let clicks pass through */
+        }
+
+        .finger-status {
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        .status-leve { color: #00ff00; font-weight: bold; }
+        .status-baisse { color: #ff0000; font-weight: bold; }
+
+        .back-btn-container {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .loading-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 20;
+            color: white;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="DataSpaceSefer Logo" class="logo-img" style="width: 150px; height: auto; left: 10px; position: absolute;">
+                DataSpace<span class="highlight">Sefer</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="projects.html" class="nav-link">Retour aux Projets</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container section" style="margin-top: 80px;">
+        <div class="page-header">
+            <h1 class="page-title">Détection des <span class="highlight">Mains</span></h1>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+                Démonstration en temps réel. Autorisez l'accès à la webcam pour commencer.
+            </p>
+        </div>
+
+        <div class="demo-container">
+            <div class="loading-overlay" id="loading">
+                <i class="fas fa-spinner fa-spin" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                <p>Chargement des modèles IA...</p>
+            </div>
+            
+            <video class="video-output"></video>
+            <canvas class="canvas-output"></canvas>
+            
+            <div class="controls-overlay" id="stats-overlay">
+                <h3 style="color: white; margin-bottom: 10px; border-bottom: 1px solid #444; padding-bottom: 5px;">Stats</h3>
+                <div id="fingers-list"></div>
+                <div style="margin-top: 10px; font-size: 1.2rem; color: white;">
+                    Doigts levés: <span id="total-fingers" style="color: #4f46e5; font-weight: bold;">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-btn-container">
+            <a href="projects.html" class="cta-btn"><i class="fas fa-arrow-left"></i> Retour</a>
+        </div>
+    </main>
+
+    <script>
+        const videoElement = document.getElementsByClassName('video-output')[0];
+        const canvasElement = document.getElementsByClassName('canvas-output')[0];
+        const canvasCtx = canvasElement.getContext('2d');
+        const loadingOverlay = document.getElementById('loading');
+        const fingersListDiv = document.getElementById('fingers-list');
+        const totalFingersSpan = document.getElementById('total-fingers');
+
+        const fingerNames = ["Pouce", "Index", "Majeur", "Annulaire", "Auriculaire"];
+        const tipIds = [4, 8, 12, 16, 20];
+
+        function onResults(results) {
+            // Hide loading on first result
+            loadingOverlay.style.display = 'none';
+
+            // Resize canvas to match video
+            canvasElement.width = videoElement.videoWidth;
+            canvasElement.height = videoElement.videoHeight;
+
+            canvasCtx.save();
+            canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
+            
+            // Draw image first (mirrored)
+            // Since we flipped the canvas with CSS transform scaleX(-1), 
+            // the video frame is drawn "normally" but appears flipped to user.
+            canvasCtx.drawImage(results.image, 0, 0, canvasElement.width, canvasElement.height);
+
+            if (results.multiHandLandmarks) {
+                for (const landmarks of results.multiHandLandmarks) {
+                    // Draw Skeleton
+                    drawConnectors(canvasCtx, landmarks, HAND_CONNECTIONS,
+                                 {color: '#00FF00', lineWidth: 5});
+                    drawLandmarks(canvasCtx, landmarks, 
+                                {color: '#FF00FF', lineWidth: 2, radius: 4});
+
+                    // Logic ported from Python
+                    const fingers = [];
+                    const h = canvasElement.height;
+                    const w = canvasElement.width;
+
+                    // Convert landmarks to pixel coordinates for easier comparison
+                    const lmList = landmarks.map((lm, index) => {
+                        return { id: index, x: lm.x * w, y: lm.y * h, z: lm.z };
+                    });
+
+                    // Thumb (Note: Python script used simple X comparison logic)
+                    // Logic: tip x > ip x. 
+                    // WARNING: This logic in the Python script is side-dependent (right hand vs left hand).
+                    // In mirrored view:
+                    // If Right Hand (appears as Left in mirror): Thumb on left. Tip.x < IP.x means "out".
+                    // If Left Hand (appears as Right in mirror): Thumb on right. Tip.x > IP.x means "out".
+                    // The Python script was simple: `lm[4].x > lm[3].x`.
+                    // We will stick to the Python implementation logic but we might need to be careful about handedness.
+                    // For now, let's implement the exact geometric check from Python.
+                    // Since we use CSS mirror, the coordinate system is still 0-left to W-right logically before render.
+                    
+                    // Actually, let's look at the Python logic again:
+                    // if lm[4][1] > lm[3][1]: append(1) else append(0)
+                    // 1 is x. So if Tip.x > IP.x -> Levé.
+                    // If you hold your right hand up (palm to camera), thumb is on your left (camera's right).
+                    // x increases to the right. So Thumb Tip is to the LEFT of Knuckle. Tip.x < Knuckle.x.
+                    // So Tip > Knuckle implies LEFT HAND palm facing camera?
+                    // Let's implement it exactly as is, it's a port.
+                    
+                    if (lmList[4].x > lmList[3].x) {
+                        fingers.push(1);
+                    } else {
+                        fingers.push(0);
+                    }
+
+                    // 4 Fingers
+                    for (let i = 1; i < 5; i++) {
+                        // y < (above)
+                        if (lmList[tipIds[i]].y < lmList[tipIds[i] - 2].y) {
+                            fingers.push(1);
+                        } else {
+                            fingers.push(0);
+                        }
+                    }
+
+                    // Update UI
+                    const total = fingers.filter(f => f === 1).length;
+                    totalFingersSpan.innerText = total;
+
+                    fingersListDiv.innerHTML = '';
+                    fingers.forEach((status, idx) => {
+                        const div = document.createElement('div');
+                        div.className = 'finger-status';
+                        const textStatus = status === 1 ? 'LEVE' : 'BAISSE';
+                        const classStatus = status === 1 ? 'status-leve' : 'status-baisse';
+                        div.innerHTML = `${fingerNames[idx]}: <span class="${classStatus}">${textStatus}</span>`;
+                        fingersListDiv.appendChild(div);
+                    });
+
+                    // Distance Finder (Thumb to Index)
+                    // Python: find_distance(4, 8)
+                    const p1 = lmList[4];
+                    const p2 = lmList[8];
+                    
+                    const dist = Math.hypot(p2.x - p1.x, p2.y - p1.y);
+                    const cx = (p1.x + p2.x) / 2;
+                    const cy = (p1.y + p2.y) / 2;
+
+                    // Draw Line
+                    canvasCtx.beginPath();
+                    canvasCtx.moveTo(p1.x, p1.y);
+                    canvasCtx.lineTo(p2.x, p2.y);
+                    canvasCtx.strokeStyle = '#FF00FF';
+                    canvasCtx.lineWidth = Math.max(2, dist / 6); // Dynamic thickness
+                    canvasCtx.stroke();
+
+                    // Draw Circles
+                    // Python logic: dynamic radius
+                    const dynamicRadius = Math.max(12, Math.min(dist * 0.20, 120));
+                    
+                    canvasCtx.beginPath();
+                    canvasCtx.arc(p1.x, p1.y, dynamicRadius, 0, 2 * Math.PI);
+                    canvasCtx.fillStyle = '#FF00FF';
+                    canvasCtx.fill();
+
+                    canvasCtx.beginPath();
+                    canvasCtx.arc(p2.x, p2.y, dynamicRadius, 0, 2 * Math.PI);
+                    canvasCtx.fillStyle = '#FF00FF';
+                    canvasCtx.fill();
+
+                    // Middle Circle
+                    const midpointRadius = Math.max(8, Math.min(dist * 0.12, 80));
+                    canvasCtx.beginPath();
+                    canvasCtx.arc(cx, cy, midpointRadius, 0, 2 * Math.PI);
+                    canvasCtx.fillStyle = '#00FF00'; // Green like in python call
+                    canvasCtx.fill();
+                }
+            }
+            canvasCtx.restore();
+        }
+
+        const hands = new Hands({locateFile: (file) => {
+            return `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`;
+        }});
+
+        hands.setOptions({
+            maxNumHands: 2,
+            modelComplexity: 1,
+            minDetectionConfidence: 0.5,
+            minTrackingConfidence: 0.5
+        });
+
+        hands.onResults(onResults);
+
+        const camera = new Camera(videoElement, {
+            onFrame: async () => {
+                await hands.send({image: videoElement});
+            },
+            width: 1280,
+            height: 720
+        });
+        camera.start();
+    </script>
+</body>
+</html>

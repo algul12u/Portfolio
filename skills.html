@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;">
+    <title data-i18n="skills.title">Compétences | Mon Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="DataSpaceSefer Logo" class="logo-img">
+                DataSpace<span class="highlight">Sefer</span>
+            </a>
+
+            <button class="mobile-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav.about">À Propos</a></li>
+                    <li><a href="skills.html" class="nav-link active" data-i18n="nav.skills">Compétences</a></li>
+                    <li><a href="projects.html" class="nav-link" data-i18n="nav.projects">Projets</a></li>
+                    <li><a href="contact.html" class="cta-btn" data-i18n="nav.contact">Me Contacter</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="container section">
+
+        <div class="page-header">
+            <h1 class="page-title" data-i18n="skills.title">Mes <span class="highlight">Compétences</span></h1>
+
+            <p data-i18n="skills.subtitle" style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+                Les technologies et langages que j'utilise pour donner vie à mes idées.
+            </p>
+        </div>
+
+        <div class="skills-grid">
+
+            <!-- LANGAGES -->
+            <div class="skills-section">
+                <h2 class="skills-category-title" data-i18n="skills.cat_lang">
+                    <i class="fas fa-code"></i> Langages
+                </h2>
+
+                <div class="visual-skills-grid">
+                    <div class="skill-visual-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="skill-icon-large">
+                        <span class="skill-name">Java</span>
+                    </div>
+
+                    <div class="skill-visual-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon-large">
+                        <span class="skill-name">JavaScript</span>
+                    </div>
+
+                    <div class="skill-visual-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="skill-icon-large">
+                        <span class="skill-name">PHP</span>
+                    </div>
+
+                    <div class="skill-visual-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-icon-large">
+                        <span class="skill-name">HTML5</span>
+                    </div>
+
+                    <div class="skill-visual-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-icon-large">
+                        <span class="skill-name">CSS3</span>
+                    </div>
+
+                    <div class="skill-visual-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart" class="skill-icon-large">
+                        <span class="skill-name">Dart</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BASES DE DONNÉES -->
+            <div class="skills-section">
+                <h2 class="skills-category-title" data-i18n="skills.cat_db">
+                    <i class="fas fa-database"></i> Bases de Données
+                </h2>
+                <div class="visual-skills-grid">
+                    <div class="skill-visual-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="skill-icon-large">
+                        <span class="skill-name">MySQL</span>
+                    </div>
+
+                    <div class="skill-visual-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="skill-icon-large">
+                        <span class="skill-name">PostgreSQL</span>
+                    </div>
+
+                    <div class="skill-visual-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite" class="skill-icon-large">
+                        <span class="skill-name">SQLite</span>
+                    </div>
+
+                    <div class="skill-visual-card">
+                        <i class="fas fa-database skill-icon-large icon-sql"></i>
+                        <span class="skill-name">SQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FRAMEWORKS -->
+            <div class="skills-section">
+                <h2 class="skills-category-title" data-i18n="skills.cat_frameworks">
+                    <i class="fas fa-layer-group"></i> Frameworks & Libs
+                </h2>
+                <div class="visual-skills-grid">
+                    <div class="skill-visual-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring" class="skill-icon-large">
+                        <span class="skill-name">Spring</span>
+                    </div>
+
+                    <div class="skill-visual-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg" alt="Symfony" class="skill-icon-large">
+                        <span class="skill-name">Symfony</span>
+                    </div>
+
+                    <div class="skill-visual-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="skill-icon-large">
+                        <span class="skill-name">Bootstrap</span>
+                    </div>
+
+                    <div class="skill-visual-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" class="skill-icon-large">
+                        <span class="skill-name">Flutter</span>
+                    </div>
+
+                    <div class="skill-visual-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" alt="Unity" class="skill-icon-large">
+                        <span class="skill-name">Unity</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OUTILS & AUTRES -->
+            <div class="skills-section">
+                <h2 class="skills-category-title" data-i18n="skills.cat_tools">
+                    <i class="fas fa-tools"></i> Outils
+                </h2>
+                <div class="visual-skills-grid">
+                    <div class="skill-visual-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="skill-icon-large">
+                        <span class="skill-name">Docker</span>
+                    </div>
+
+                    <div class="skill-visual-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode" class="skill-icon-large">
+                        <span class="skill-name">VSCode</span>
+                    </div>
+
+
+                    <div class="skill-visual-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-icon-large">
+                        <span class="skill-name">Git</span>
+                    </div>
+
+                    <div class="skill-visual-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg" alt="Maven" class="skill-icon-large">
+                        <span class="skill-name">Maven</span>
+                    </div>
+
+                    <div class="skill-visual-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman" class="skill-icon-large">
+                        <span class="skill-name">Postman</span>
+                    </div>
+
+                    <div class="skill-visual-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" class="skill-icon-large">
+                        <span class="skill-name">Figma</span>
+                    </div>
+
+                    <div class="skill-visual-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-original.svg" alt="Trello" class="skill-icon-large">
+                        <span class="skill-name">Trello</span>
+                    </div>
+
+                    <div class="skill-visual-card">
+                        <i class="fas fa-file-video skill-icon-large icon-capcut"></i>
+                        <span class="skill-name">CapCut</span>
+                    </div>
+
+                    <div class="skill-visual-card">
+                        <i class="fas fa-project-diagram skill-icon-large icon-gantt"></i>
+                        <span class="skill-name">GanttProject</span>
+                    </div>
+
+                    <div class="skill-visual-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="Windows" class="skill-icon-large">
+                        <span class="skill-name">Windows</span>
+                    </div>
+
+                    <div class="skill-visual-card">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" class="skill-icon-large">
+                        <span class="skill-name">Linux</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="security.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
