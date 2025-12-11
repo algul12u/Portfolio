@@ -187,8 +187,14 @@ async function setLanguage(lang) {
         const translations = await response.json();
 
         // Update UI
+        // Update UI
         if (currentLangSpan) currentLangSpan.textContent = lang.toUpperCase();
-        if (currentFlagImg) currentFlagImg.src = `https://flagcdn.com/w40/${lang}.png`;
+        
+        // Map language code to flag code (en -> gb)
+        let flagCode = lang;
+        if (lang === 'en') flagCode = 'gb';
+        
+        if (currentFlagImg) currentFlagImg.src = `https://flagcdn.com/w40/${flagCode}.png`;
 
         // Update Text
         document.querySelectorAll('[data-i18n]').forEach(el => {
