@@ -38,6 +38,32 @@
                     <li><a href="projects.html" class="nav-link" data-i18n="nav.projects">Projets</a></li>
                     <li><a href="contact.html" class="cta-btn active" data-i18n="nav.contact">Me Contacter</a></li>
                 </ul>
+
+                <!-- LANGUAGE SWITCHER -->
+                <div class="language-selector">
+    <div class="selected-lang">
+        <img src="https://flagcdn.com/w40/fr.png" class="lang-flag" id="current-flag" alt="FR">
+        <span id="current-lang">FR</span>
+        <i class="fas fa-chevron-down lang-chevron"></i>
+    </div>
+
+    <div class="lang-dropdown">
+        <a href="#" class="lang-option" data-lang="fr">
+            <img src="https://flagcdn.com/w40/fr.png" class="lang-flag" alt="Drapeau Français"> FR
+        </a>
+        <a href="#" class="lang-option" data-lang="tr">
+            <img src="https://flagcdn.com/w40/tr.png" class="lang-flag" alt="Drapeau Turc"> TR
+        </a>
+        <a href="#" class="lang-option" data-lang="en">
+            <img src="https://flagcdn.com/w40/gb.png" class="lang-flag" alt="Drapeau Anglais"> EN
+        </a>
+        <a href="#" class="lang-option" data-lang="de">
+            <img src="https://flagcdn.com/w40/de.png" class="lang-flag" alt="Drapeau Allemand"> DE
+        </a>
+    </div>
+</div>
+
+
             </nav>
         </div>
     </header>
@@ -60,7 +86,7 @@
                 <div class="contact-card">
                     <i class="fas fa-phone"></i>
                     <h4>Téléphone</h4>
-                    <a href="tel:+33769049290">Appelez-moi</a>
+                    <a href="tel:+33769049290">0769049290</a>
                 </div>
             </div>
 
@@ -74,7 +100,11 @@
                 </div>
                 <div class="form-group">
                     <label for="email" data-i18n="contact.email">Votre Email</label>
-                    <input type="email" id="email" name="email" placeholder="jean@exemple.com" required>
+                    <input type="email" id="email" name="email" placeholder="jean@exemple.com" required pattern="[^@]+@[^@]+\.[^@]+">
+                </div>
+                <div class="form-group">
+                    <label for="subject" data-i18n="contact.subject">Sujet</label>
+                    <input type="text" id="subject" name="subject" placeholder="Demande de collaboration" required>
                 </div>
                 <div class="form-group">
                     <label for="message" data-i18n="contact.message">Message</label>

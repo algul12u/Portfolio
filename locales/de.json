@@ -57,12 +57,28 @@
         "subtitle": "Eine Frage, ein Angebot oder einfach Lust zu reden? Ich bin da.",
         "name": "Ihr Name",
         "email": "Ihre E-Mail",
+        "subject": "Betreff",
         "message": "Nachricht",
         "send_btn": "Nachricht senden"
     },
     "common": {
         "learn_more": "Learn More",
         "back_projects": "Back to Projects"
+    },
+    "hand_demo": {
+        "title": "<span class='highlight'>Hand</span>erkennung",
+        "subtitle": "Echtzeit-Demonstration. Erlauben Sie den Zugriff auf die Webcam, um zu beginnen.",
+        "loading": "KI-Modelle werden geladen...",
+        "stats": "Statistiken",
+        "fingers_up": "Finger hoch",
+        "back": "Zurück"
+    },
+    "flipper_demo": {
+        "title": "<span class='highlight'>Flipper</span>-Spiel",
+        "subtitle": "Entwickelt mit Unity & C#",
+        "how_to_play": "Wie spielt man?",
+        "controls": "<span class='key'>Q</span> / <span class='key'>D</span> (oder <span class='key'>←</span> / <span class='key'>→</span>) um die Flipper zu steuern.",
+        "launch": "<span class='key'>Leertaste</span> um den Ball zu starten."
     },
     "project_details": {
         "hand": {

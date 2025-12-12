@@ -57,12 +57,28 @@
         "subtitle": "Bir soru, bir teklif veya sadece sohbet etmek mi istiyorsunuz? Sizi dinliyorum.",
         "name": "Adınız",
         "email": "E-posta Adresiniz",
+        "subject": "Konu",
         "message": "Mesajınız",
         "send_btn": "Mesajı Gönder"
     },
     "common": {
         "learn_more": "Daha Fazla Bilgi",
         "back_projects": "Projelere Dön"
+    },
+    "hand_demo": {
+        "title": "<span class='highlight'>El</span> Algılama",
+        "subtitle": "Gerçek zamanlı gösterim. Başlamak için web kamerası erişimine izin verin.",
+        "loading": "Yapay zeka modelleri yüklenyor...",
+        "stats": "İstatistikler",
+        "fingers_up": "Kaldırılan parmaklar",
+        "back": "Geri"
+    },
+    "flipper_demo": {
+        "title": "<span class='highlight'>Pinball</span> Oyunu",
+        "subtitle": "Unity & C# ile geliştirildi",
+        "how_to_play": "Nasıl oynanır?",
+        "controls": "<span class='key'>Q</span> / <span class='key'>D</span> (veya <span class='key'>←</span> / <span class='key'>→</span>) paleti kontrol etmek için.",
+        "launch": "<span class='key'>Boşluk</span> topu fırlatmak için."
     },
     "project_details": {
         "hand": {

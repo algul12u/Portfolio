@@ -90,21 +90,55 @@
     <header class="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="DataSpaceSefer Logo" class="logo-img" style="width: 150px; height: auto; left: 10px; position: absolute;">
+                <img src="images/logo.png" alt="DataSpaceSefer Logo" class="logo-img">
                 DataSpace<span class="highlight">Sefer</span>
             </a>
+            
+            <button class="mobile-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
             <nav class="nav">
                 <ul class="nav-list">
-                    <li><a href="projects.html" class="nav-link">Retour aux Projets</a></li>
+                    <li><a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav.about">À Propos</a></li>
+                    <li><a href="skills.html" class="nav-link" data-i18n="nav.skills">Compétences</a></li>
+                    <li><a href="projects.html" class="nav-link active" data-i18n="nav.projects">Projets</a></li>
+                    <li><a href="contact.html" class="cta-btn" data-i18n="nav.contact">Me Contacter</a></li>
                 </ul>
+
+                <!-- LANGUAGE SWITCHER -->
+                <div class="language-selector">
+    <div class="selected-lang">
+        <img src="https://flagcdn.com/w40/fr.png" class="lang-flag" id="current-flag" alt="FR">
+        <span id="current-lang">FR</span>
+        <i class="fas fa-chevron-down lang-chevron"></i>
+    </div>
+
+    <div class="lang-dropdown">
+        <a href="#" class="lang-option" data-lang="fr">
+            <img src="https://flagcdn.com/w40/fr.png" class="lang-flag" alt="Drapeau Français"> FR
+        </a>
+        <a href="#" class="lang-option" data-lang="tr">
+            <img src="https://flagcdn.com/w40/tr.png" class="lang-flag" alt="Drapeau Turc"> TR
+        </a>
+        <a href="#" class="lang-option" data-lang="en">
+            <img src="https://flagcdn.com/w40/gb.png" class="lang-flag" alt="Drapeau Anglais"> EN
+        </a>
+        <a href="#" class="lang-option" data-lang="de">
+            <img src="https://flagcdn.com/w40/de.png" class="lang-flag" alt="Drapeau Allemand"> DE
+        </a>
+    </div>
+</div>
+
             </nav>
         </div>
     </header>
 
     <main class="container section" style="margin-top: 80px;">
         <div class="page-header">
-            <h1 class="page-title">Détection des <span class="highlight">Mains</span></h1>
-            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+            <h1 class="page-title" data-i18n="hand_demo.title">Détection des <span class="highlight">Mains</span></h1>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;" data-i18n="hand_demo.subtitle">
                 Démonstration en temps réel. Autorisez l'accès à la webcam pour commencer.
             </p>
         </div>
@@ -112,23 +146,23 @@
         <div class="demo-container">
             <div class="loading-overlay" id="loading">
                 <i class="fas fa-spinner fa-spin" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                <p>Chargement des modèles IA...</p>
+                <p data-i18n="hand_demo.loading">Chargement des modèles IA...</p>
             </div>
             
             <video class="video-output"></video>
             <canvas class="canvas-output"></canvas>
             
             <div class="controls-overlay" id="stats-overlay">
-                <h3 style="color: white; margin-bottom: 10px; border-bottom: 1px solid #444; padding-bottom: 5px;">Stats</h3>
+                <h3 style="color: white; margin-bottom: 10px; border-bottom: 1px solid #444; padding-bottom: 5px;" data-i18n="hand_demo.stats">Stats</h3>
                 <div id="fingers-list"></div>
                 <div style="margin-top: 10px; font-size: 1.2rem; color: white;">
-                    Doigts levés: <span id="total-fingers" style="color: #4f46e5; font-weight: bold;">0</span>
+                    <span data-i18n="hand_demo.fingers_up">Doigts levés</span>: <span id="total-fingers" style="color: #4f46e5; font-weight: bold;">0</span>
                 </div>
             </div>
         </div>
 
         <div class="back-btn-container">
-            <a href="projects.html" class="cta-btn"><i class="fas fa-arrow-left"></i> Retour</a>
+            <a href="projects.html" class="cta-btn"><i class="fas fa-arrow-left"></i> <span data-i18n="hand_demo.back">Retour</span></a>
         </div>
     </main>
 
@@ -290,5 +324,7 @@
         });
         camera.start();
     </script>
+
+    <script src="script.js"></script>
 </body>
 </html>

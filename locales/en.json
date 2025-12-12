@@ -57,12 +57,28 @@
         "subtitle": "A question, an offer or just want to talk? I'm listening.",
         "name": "Your Name",
         "email": "Your Email",
+        "subject": "Subject",
         "message": "Message",
         "send_btn": "Send Message"
     },
     "common": {
         "learn_more": "Learn More",
         "back_projects": "Back to Projects"
+    },
+    "hand_demo": {
+        "title": "<span class='highlight'>Hand</span> Detection",
+        "subtitle": "Real-time demonstration. Allow webcam access to begin.",
+        "loading": "Loading AI models...",
+        "stats": "Stats",
+        "fingers_up": "Fingers up",
+        "back": "Back"
+    },
+    "flipper_demo": {
+        "title": "<span class='highlight'>Pinball</span> Game",
+        "subtitle": "Developed with Unity & C#",
+        "how_to_play": "How to play?",
+        "controls": "<span class='key'>Q</span> / <span class='key'>D</span> (or <span class='key'>←</span> / <span class='key'>→</span>) to control the flippers.",
+        "launch": "<span class='key'>Space</span> to launch the ball."
     },
     "project_details": {
         "hand": {

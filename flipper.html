@@ -60,7 +60,10 @@
     <!-- HEADER -->
     <header class="header">
         <div class="container header-container">
-            <a href="index.html" class="logo">SpaceData<span class="highlight">Sefer</span>.</a>
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="DataSpaceSefer Logo" class="logo-img">
+                DataSpace<span class="highlight">Sefer</span>
+            </a>
             
             <button class="mobile-toggle" aria-label="Menu">
                 <i class="fas fa-bars"></i>
@@ -68,21 +71,46 @@
 
             <nav class="nav">
                 <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">Accueil</a></li>
-                    <li><a href="about.html" class="nav-link">À Propos</a></li>
-                    <li><a href="skills.html" class="nav-link">Compétences</a></li>
-                    <li><a href="projects.html" class="nav-link active">Projets</a></li>
-                    <li><a href="contact.html" class="cta-btn">Me Contacter</a></li>
+                    <li><a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav.about">À Propos</a></li>
+                    <li><a href="skills.html" class="nav-link" data-i18n="nav.skills">Compétences</a></li>
+                    <li><a href="projects.html" class="nav-link active" data-i18n="nav.projects">Projets</a></li>
+                    <li><a href="contact.html" class="cta-btn" data-i18n="nav.contact">Me Contacter</a></li>
                 </ul>
+
+                <!-- LANGUAGE SWITCHER -->
+                <div class="language-selector">
+    <div class="selected-lang">
+        <img src="https://flagcdn.com/w40/fr.png" class="lang-flag" id="current-flag" alt="FR">
+        <span id="current-lang">FR</span>
+        <i class="fas fa-chevron-down lang-chevron"></i>
+    </div>
+
+    <div class="lang-dropdown">
+        <a href="#" class="lang-option" data-lang="fr">
+            <img src="https://flagcdn.com/w40/fr.png" class="lang-flag" alt="Drapeau Français"> FR
+        </a>
+        <a href="#" class="lang-option" data-lang="tr">
+            <img src="https://flagcdn.com/w40/tr.png" class="lang-flag" alt="Drapeau Turc"> TR
+        </a>
+        <a href="#" class="lang-option" data-lang="en">
+            <img src="https://flagcdn.com/w40/gb.png" class="lang-flag" alt="Drapeau Anglais"> EN
+        </a>
+        <a href="#" class="lang-option" data-lang="de">
+            <img src="https://flagcdn.com/w40/de.png" class="lang-flag" alt="Drapeau Allemand"> DE
+        </a>
+    </div>
+</div>
+
             </nav>
         </div>
     </header>
 
     <main class="container section">
         <div class="page-header">
-            <a href="projects.html" style="display: inline-block; margin-bottom: 1rem; color: var(--text-secondary);"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
-            <h1 class="page-title">Jeu <span class="highlight">Flipper</span></h1>
-            <p style="color: var(--text-secondary);">Développé avec Unity & C#</p>
+            <a href="projects.html" style="display: inline-block; margin-bottom: 1rem; color: var(--text-secondary);" data-i18n="common.back_projects"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
+            <h1 class="page-title" data-i18n="flipper_demo.title">Jeu <span class="highlight">Flipper</span></h1>
+            <p style="color: var(--text-secondary);" data-i18n="flipper_demo.subtitle">Développé avec Unity & C#</p>
         </div>
 
         <div class="game-container">
@@ -90,11 +118,11 @@
         </div>
 
         <div class="controls-info">
-            <h3>Comment jouer ?</h3>
+            <h3 data-i18n="flipper_demo.how_to_play">Comment jouer ?</h3>
             <p style="margin-top: 1rem;">
-                <span class="key">Q</span> / <span class="key">D</span> (ou <span class="key">←</span> / <span class="key">→</span>) pour contrôler les flippers.
+                <span data-i18n="flipper_demo.controls"><span class="key">Q</span> / <span class="key">D</span> (ou <span class="key">←</span> / <span class="key">→</span>) pour contrôler les flippers.</span>
                 <br>
-                <span class="key">Espace</span> pour lancer la balle.
+                <span data-i18n="flipper_demo.launch"><span class="key">Espace</span> pour lancer la balle.</span>
             </p>
         </div>
     </main>
