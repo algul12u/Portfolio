@@ -59,7 +59,11 @@
         "email": "E-posta Adresiniz",
         "subject": "Konu",
         "message": "Mesajınız",
-        "send_btn": "Mesajı Gönder"
+        "send_btn": "Mesajı Gönder",
+        "name_placeholder": "Ahmet Yılmaz",
+        "email_placeholder": "ahmet@ornek.com",
+        "subject_placeholder": "İşbirliği Talebi",
+        "message_placeholder": "Merhaba, şu konuda görüşmek istiyorum..."
     },
     "common": {
         "learn_more": "Daha Fazla Bilgi",

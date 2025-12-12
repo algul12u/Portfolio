@@ -59,7 +59,11 @@
         "email": "Your Email",
         "subject": "Subject",
         "message": "Message",
-        "send_btn": "Send Message"
+        "send_btn": "Send Message",
+        "name_placeholder": "John Doe",
+        "email_placeholder": "john@example.com",
+        "subject_placeholder": "Collaboration Request",
+        "message_placeholder": "Hello, I would like to discuss..."
     },
     "common": {
         "learn_more": "Learn More",

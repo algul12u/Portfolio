@@ -58,7 +58,11 @@
     "email": "Votre Email",
     "subject": "Sujet",
     "message": "Message",
-    "send_btn": "Envoyer le message"
+    "send_btn": "Envoyer le message",
+    "name_placeholder": "Jean Dupont",
+    "email_placeholder": "jean@exemple.com",
+    "subject_placeholder": "Demande de collaboration",
+    "message_placeholder": "Bonjour, je voudrais discuter de..."
   },
   "common": {
     "learn_more": "En savoir plus",

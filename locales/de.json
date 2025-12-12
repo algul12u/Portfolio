@@ -59,7 +59,11 @@
         "email": "Ihre E-Mail",
         "subject": "Betreff",
         "message": "Nachricht",
-        "send_btn": "Nachricht senden"
+        "send_btn": "Nachricht senden",
+        "name_placeholder": "Max Mustermann",
+        "email_placeholder": "max@beispiel.de",
+        "subject_placeholder": "Zusammenarbeitsanfrage",
+        "message_placeholder": "Hallo, ich möchte über... sprechen"
     },
     "common": {
         "learn_more": "Learn More",

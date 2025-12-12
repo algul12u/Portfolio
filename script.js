@@ -208,6 +208,18 @@ async function setLanguage(lang) {
             el.innerHTML = text;
         });
 
+        // Update Placeholders
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-i18n-placeholder');
+            const keys = key.split('.');
+            let text = translations;
+            for (const k of keys) {
+                if (text[k] === undefined) return;
+                text = text[k];
+            }
+            el.placeholder = text;
+        });
+
         // Save
         localStorage.setItem('preferredLang', lang);
 
