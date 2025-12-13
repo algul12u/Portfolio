@@ -37,7 +37,7 @@
     "subtitle": "Une sélection de mes travaux académiques et personnels les plus significatifs.",
     "flipper_title": "Jeu Flipper (Unity)",
     "flipper_desc": "Un jeu de Flipper 3D développé avec le moteur Unity. Physique réaliste, score en temps réel et effets sonores immersifs.",
-    "play_btn": "Tester le jeu",
+    "play_btn": "Tester",
     "hand_title": "Détection des Mains",
     "hand_desc": "Application de vision par ordinateur utilisant l'IA pour détecter les mains, le squelette et compter les doigts en temps réel via webcam.",
     "hand_btn": "Tester",
