@@ -37,6 +37,32 @@ class HandDetector:
         # IDs des doigts (pouce, index, majeur, annulaire, auriculaire)
         self.tip_ids = [4, 8, 12, 16, 20]
         
+    def is_valid_hand(self, hand_landmarks):
+        """
+        Vérifie si la main détectée a des proportions géométriques valides
+        (pour exclure les pieds qui ont des doigts très courts par rapport à la paume)
+        """
+        # Points de repère
+        wrist = hand_landmarks.landmark[0]
+        middle_mcp = hand_landmarks.landmark[9]
+        middle_tip = hand_landmarks.landmark[12]
+        
+        # Calcul de la longueur de la paume (Poignet -> Base du majeur)
+        palm_length = math.hypot(middle_mcp.x - wrist.x, middle_mcp.y - wrist.y)
+        
+        # Calcul de la longueur du majeur (Base -> Bout)
+        finger_length = math.hypot(middle_tip.x - middle_mcp.x, middle_tip.y - middle_mcp.y)
+        
+        # Ratio Doigt/Paume
+        if palm_length == 0:
+            return False
+            
+        ratio = finger_length / palm_length
+        
+        # Les pieds ont un ratio beaucoup plus faible (< 0.3 en général)
+        # Les mains ont généralement un ratio > 0.5
+        return ratio > 0.45
+
     def find_hands(self, img, draw=True):
         """
         Détecte les mains dans une image
@@ -52,18 +78,23 @@ class HandDetector:
         img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         self.results = self.hands.process(img_rgb)
         
+        # Stocker uniquement les mains valides
+        self.valid_hands = []
+        
         # Dessiner les landmarks si des mains sont détectées
         if self.results.multi_hand_landmarks:
             for hand_landmarks in self.results.multi_hand_landmarks:
-                if draw:
-                    # Dessiner les connexions du squelette
-                    self.mp_draw.draw_landmarks(
-                        img,
-                        hand_landmarks,
-                        self.mp_hands.HAND_CONNECTIONS,
-                        self.mp_drawing_styles.get_default_hand_landmarks_style(),
-                        self.mp_drawing_styles.get_default_hand_connections_style()
-                    )
+                if self.is_valid_hand(hand_landmarks):
+                    self.valid_hands.append(hand_landmarks)
+                    if draw:
+                        # Dessiner les connexions du squelette
+                        self.mp_draw.draw_landmarks(
+                            img,
+                            hand_landmarks,
+                            self.mp_hands.HAND_CONNECTIONS,
+                            self.mp_drawing_styles.get_default_hand_landmarks_style(),
+                            self.mp_drawing_styles.get_default_hand_connections_style()
+                        )
         
         return img
     
@@ -81,9 +112,9 @@ class HandDetector:
         """
         self.landmark_list = []
         
-        if self.results.multi_hand_landmarks:
-            if hand_number < len(self.results.multi_hand_landmarks):
-                my_hand = self.results.multi_hand_landmarks[hand_number]
+        if self.valid_hands:
+            if hand_number < len(self.valid_hands):
+                my_hand = self.valid_hands[hand_number]
                 
                 for id, landmark in enumerate(my_hand.landmark):
                     # Obtenir les coordonnées en pixels
@@ -175,7 +206,7 @@ def main():
     cap.set(4, 720)   # Hauteur
     
     # Initialisation du détecteur
-    detector = HandDetector(max_hands=2)
+    detector = HandDetector(max_hands=2, detection_confidence=0.8, tracking_confidence=0.8)
     
     # Noms des doigts
     finger_names = ["Pouce", "Index", "Majeur", "Annulaire", "Auriculaire"]
