@@ -203,5 +203,10 @@
         "ip_text": "Unless otherwise stated, the content of this site (structure, texts, logos, images, code) is subject to French and international legislation on copyright and intellectual property. Any reproduction, total or partial, is prohibited without prior authorization.",
         "data_title": "4. Personal Data",
         "data_text": "This site does not collect any personal data without your knowledge. Information sent via the contact form (name, email) is used solely for our correspondence and is never shared with third parties."
+    },
+    "error404": {
+        "title": "404",
+        "subtitle": "Oops! The page you are looking for seems to have vanished into the void.",
+        "button": "Back to Home"
     }
 }

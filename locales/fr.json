@@ -202,5 +202,10 @@
     "ip_text": "L'ensemble de ce site (structure, textes, logos, images, code) relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Toute reproduction, totale ou partielle, est interdite sans autorisation préalable.",
     "data_title": "4. Données Personnelles",
     "data_text": "Ce site ne collecte aucune donnée personnelle à votre insu. Les informations envoyées via le formulaire de contact (nom, email) sont utilisées uniquement dans le cadre de nos échanges et ne sont jamais transmises à des tiers."
+  },
+  "error404": {
+    "title": "404",
+    "subtitle": "Oups ! La page que vous cherchez semble avoir disparu dans le néant.",
+    "button": "Retour à l'accueil"
   }
 }

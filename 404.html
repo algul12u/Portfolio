@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="error404.title">404 | Page Introuvable</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Background Blobs (Reused) -->
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- HEADER (Reused) -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="DataSpaceSefer Logo" class="logo-img">
+                DataSpace<span class="highlight">Sefer</span>
+            </a>
+
+            <!-- Simplified Nav for 404 can just be home -->
+             <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active" data-i18n="nav.home">Accueil</a></li>
+                </ul>
+
+                <!-- LANGUAGE SWITCHER -->
+                <div class="language-selector">
+                    <div class="selected-lang">
+                        <img src="https://flagcdn.com/w40/fr.png" class="lang-flag" id="current-flag" alt="FR">
+                        <span id="current-lang">FR</span>
+                        <i class="fas fa-chevron-down lang-chevron"></i>
+                    </div>
+
+                    <div class="lang-dropdown">
+                        <a href="#" class="lang-option" data-lang="fr">
+                            <img src="https://flagcdn.com/w40/fr.png" class="lang-flag" alt="Drapeau Français"> FR
+                        </a>
+                        <a href="#" class="lang-option" data-lang="tr">
+                            <img src="https://flagcdn.com/w40/tr.png" class="lang-flag" alt="Drapeau Turc"> TR
+                        </a>
+                        <a href="#" class="lang-option" data-lang="en">
+                            <img src="https://flagcdn.com/w40/gb.png" class="lang-flag" alt="Drapeau Anglais"> EN
+                        </a>
+                        <a href="#" class="lang-option" data-lang="de">
+                            <img src="https://flagcdn.com/w40/de.png" class="lang-flag" alt="Drapeau Allemand"> DE
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="error-page container">
+        
+        <div class="error-icon-container">
+            <i class="fas fa-ghost"></i>
+        </div>
+
+        <div class="error-content">
+            <h1 class="error-title" data-i18n="error404.title">404</h1>
+            <p class="error-subtitle" data-i18n="error404.subtitle">
+                Oups ! La page que vous cherchez semble avoir disparu dans le néant.
+            </p>
+            
+            <a href="index.html" class="cta-btn" data-i18n="error404.button">
+                <i class="fas fa-home"></i> Retour à l'accueil
+            </a>
+        </div>
+
+    </main>
+
+    <!-- FOOTER PLACEHOLDER -->
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

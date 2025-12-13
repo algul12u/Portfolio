@@ -203,5 +203,10 @@
         "ip_text": "Aksi belirtilmedikçe, bu sitenin içeriği (yapı, metinler, logolar, resimler, kod) Fransız ve uluslararası telif hakkı ve fikri mülkiyet mevzuatına tabidir. Tamamen veya kısmen çoğaltılması, önceden izin alınmaksızın yasaktır.",
         "data_title": "4. Kişisel Veriler",
         "data_text": "Bu site bilginiz dışında hiçbir kişisel veri toplamaz. İletişim formu aracılığıyla gönderilen bilgiler (isim, e-posta) sadece yazışmalarımız kapsamında kullanılır ve asla üçüncü şahıslarla paylaşılmaz."
+    },
+    "error404": {
+        "title": "404",
+        "subtitle": "Ups! Aradığınız sayfa boşlukta kaybolmuş gibi görünüyor.",
+        "button": "Ana Sayfaya Dön"
     }
 }

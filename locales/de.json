@@ -203,5 +203,10 @@
         "ip_text": "Sofern nicht anders angegeben, unterliegt der Inhalt dieser Website (Struktur, Texte, Logos, Bilder, Code) der französischen und internationalen Gesetzgebung über Urheberrecht und geistiges Eigentum. Jede Vervielfältigung, ganz oder teilweise, ist ohne vorherige Genehmigung untersagt.",
         "data_title": "4. Personenbezogene Daten",
         "data_text": "Diese Website sammelt keine personenbezogenen Daten ohne Ihr Wissen. Die über das Kontaktformular gesendeten Informationen (Name, E-Mail) werden ausschließlich im Rahmen unserer Korrespondenz verwendet und niemals an Dritte weitergegeben."
+    },
+    "error404": {
+        "title": "404",
+        "subtitle": "Hoppla! Die Seite, die Sie suchen, scheint im Nichts verschwunden zu sein.",
+        "button": "Zurück zur Startseite"
     }
 }
