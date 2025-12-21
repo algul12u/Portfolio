@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://algul12u.github.io/Portfolio/sitemap.xml

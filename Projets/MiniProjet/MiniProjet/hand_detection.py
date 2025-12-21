@@ -37,31 +37,88 @@ class HandDetector:
         # IDs des doigts (pouce, index, majeur, annulaire, auriculaire)
         self.tip_ids = [4, 8, 12, 16, 20]
         
-    def is_valid_hand(self, hand_landmarks):
+        # Debug : stocker les derniers ratios calculés
+        self.last_finger_ratio = 0
+        self.last_aspect_ratio = 0
+        self.last_all_fingers_ratio = 0
+        self.last_thumb_angle = 0
+        self.last_spread_ratio = 0
+        
+    def is_valid_hand(self, hand_landmarks, debug=False):
         """
         Vérifie si la main détectée a des proportions géométriques valides
-        (pour exclure les pieds qui ont des doigts très courts par rapport à la paume)
+        VALIDATION ULTRA-STRICTE pour éliminer TOUS les pieds
         """
-        # Points de repère
+        # Points de repère principaux
         wrist = hand_landmarks.landmark[0]
-        middle_mcp = hand_landmarks.landmark[9]
-        middle_tip = hand_landmarks.landmark[12]
+        thumb_tip = hand_landmarks.landmark[4]
+        thumb_mcp = hand_landmarks.landmark[2]   # Base du pouce
+        index_mcp = hand_landmarks.landmark[5]   # Base de l'index
+        index_tip = hand_landmarks.landmark[8]   # Bout de l'index
+        middle_mcp = hand_landmarks.landmark[9]  # Base du majeur
+        middle_tip = hand_landmarks.landmark[12] # Bout du majeur
+        ring_mcp = hand_landmarks.landmark[13]   # Base de l'annulaire
+        ring_tip = hand_landmarks.landmark[16]   # Bout de l'annulaire
+        pinky_mcp = hand_landmarks.landmark[17]  # Base de l'auriculaire
+        pinky_tip = hand_landmarks.landmark[20]  # Bout de l'auriculaire
         
-        # Calcul de la longueur de la paume (Poignet -> Base du majeur)
+        # 1. Longueur de la paume (Poignet -> Base du majeur)
         palm_length = math.hypot(middle_mcp.x - wrist.x, middle_mcp.y - wrist.y)
         
-        # Calcul de la longueur du majeur (Base -> Bout)
-        finger_length = math.hypot(middle_tip.x - middle_mcp.x, middle_tip.y - middle_mcp.y)
+        # 2. Largeur de la paume (Base Index -> Base Auriculaire)
+        palm_width = math.hypot(pinky_mcp.x - index_mcp.x, pinky_mcp.y - index_mcp.y)
         
-        # Ratio Doigt/Paume
-        if palm_length == 0:
+        # 3. Longueur de TOUS les doigts
+        index_length = math.hypot(index_tip.x - index_mcp.x, index_tip.y - index_mcp.y)
+        middle_length = math.hypot(middle_tip.x - middle_mcp.x, middle_tip.y - middle_mcp.y)
+        ring_length = math.hypot(ring_tip.x - ring_mcp.x, ring_tip.y - ring_mcp.y)
+        pinky_length = math.hypot(pinky_tip.x - pinky_mcp.x, pinky_tip.y - pinky_mcp.y)
+        
+        # 4. Angle du pouce
+        v1_x = thumb_tip.x - wrist.x
+        v1_y = thumb_tip.y - wrist.y
+        v2_x = index_mcp.x - wrist.x
+        v2_y = index_mcp.y - wrist.y
+        
+        dot_product = v1_x * v2_x + v1_y * v2_y
+        mag1 = math.sqrt(v1_x**2 + v1_y**2)
+        mag2 = math.sqrt(v2_x**2 + v2_y**2)
+        
+        if mag1 == 0 or mag2 == 0 or palm_length == 0:
             return False
             
-        ratio = finger_length / palm_length
+        cos_angle = max(-1.0, min(1.0, dot_product / (mag1 * mag2)))
+        thumb_angle_deg = math.degrees(math.acos(cos_angle))
         
-        # Les pieds ont un ratio beaucoup plus faible (< 0.3 en général)
-        # Les mains ont généralement un ratio > 0.5
-        return ratio > 0.45
+        # 5. NOUVEAU: Écartement des doigts (spread)
+        # Les mains peuvent écarter les doigts, les pieds ont des orteils serrés
+        finger_spread = math.hypot(index_tip.x - pinky_tip.x, index_tip.y - pinky_tip.y)
+        spread_ratio = finger_spread / palm_length
+        
+        # --- VALIDATION ULTRA-STRICTE ---
+        
+        finger_ratio = middle_length / palm_length
+        aspect_ratio = palm_width / palm_length
+        avg_finger_length = (index_length + middle_length + ring_length + pinky_length) / 4
+        all_fingers_ratio = avg_finger_length / palm_length
+        
+        # Stockage debug
+        self.last_finger_ratio = finger_ratio
+        self.last_aspect_ratio = aspect_ratio
+        self.last_all_fingers_ratio = all_fingers_ratio
+        self.last_thumb_angle = thumb_angle_deg
+        self.last_spread_ratio = spread_ratio
+        
+        # SEUILS MAXIMUM - Si un pied passe ça, c'est impossible
+        is_long_fingers = finger_ratio > 0.8        # TRÈS long (était 0.7)
+        is_square_palm = aspect_ratio > 0.75        # TRÈS carré (était 0.7)
+        is_all_fingers_long = all_fingers_ratio > 0.65  # TOUS très longs (était 0.55)
+        is_thumb_perpendicular = 50 < thumb_angle_deg < 130  # Plus strict (était 40-140)
+        is_fingers_spread = spread_ratio > 1.2      # Doigts écartés
+        
+        # TOUS les critères doivent être vrais
+        return (is_long_fingers and is_square_palm and is_all_fingers_long 
+                and is_thumb_perpendicular and is_fingers_spread)
 
     def find_hands(self, img, draw=True):
         """
@@ -246,6 +303,21 @@ def main():
             # Dessiner un cercle sur le pouce et l'index, une droite entre eux,
             # et un cercle d'une autre couleur au milieu de la droite
             detector.find_distance(4, 8, img, draw=True, endpoint_color=(0, 255, 0), midpoint_color=(0, 0, 255))
+            
+            # Affichage DEBUG des ratios géométriques
+            debug_y = 300
+            cv2.putText(img, f'DEBUG - Validation ULTRA-STRICTE:', (30, debug_y),
+                       cv2.FONT_HERSHEY_SIMPLEX, 0.55, (0, 255, 255), 2)
+            cv2.putText(img, f'Majeur/Paume: {detector.last_finger_ratio:.2f} (min: 0.80)', (30, debug_y + 25),
+                       cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 255, 255), 1)
+            cv2.putText(img, f'Largeur/Long: {detector.last_aspect_ratio:.2f} (min: 0.75)', (30, debug_y + 45),
+                       cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 255, 255), 1)
+            cv2.putText(img, f'Moy.Doigts: {detector.last_all_fingers_ratio:.2f} (min: 0.65)', (30, debug_y + 65),
+                       cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 255, 255), 1)
+            cv2.putText(img, f'Angle Pouce: {detector.last_thumb_angle:.1f}deg (50-130)', (30, debug_y + 85),
+                       cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 255, 255), 1)
+            cv2.putText(img, f'Ecartement: {detector.last_spread_ratio:.2f} (min: 1.20)', (30, debug_y + 105),
+                       cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 255, 255), 1)
         
         # Afficher les instructions
         cv2.putText(img, "Appuyez sur 'q' pour quitter", (img.shape[1] - 400, 30),
