@@ -7,7 +7,7 @@
         "contact": "Contact Me"
     },
     "hero": {
-        "title": "I'm Algul Sefer, <br>A Developer in the making.",
+        "title": "I'm Sefer Algul, <br>A Developer in the making.",
         "subtitle": "Currently a 3rd year Computer Science student. I enjoy creating useful applications and solving problems through code.",
         "cta": "View my work",
         "more": "Learn more →"
@@ -15,7 +15,7 @@
     "about": {
         "title": "Who am I <span class='highlight'>?</span>",
         "subtitle": "An insight into my background, passions and what motivates me.",
-        "p1": "Hi! I'm <strong>Algul Sefer</strong>. I'm currently in my <strong>3rd year of Computer Science</strong>. Technology has always fascinated me, and coding became a way to create real things.",
+        "p1": "Hi! I'm <strong>Sefer Algul</strong>. I'm currently in my <strong>3rd year of Computer Science</strong>. Technology has always fascinated me, and coding became a way to create real things.",
         "p2": "I love working on everything: from dynamic web interfaces to database management, mobile apps or even games.",
         "p3": "My goal is to keep learning and work on meaningful projects. I’m curious, motivated and I enjoy teamwork.",
         "hobby_games": "Video Games",
