@@ -215,7 +215,8 @@ img {
 
 .nav-list {
   display: flex;
-  gap: 2.5rem;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .nav-link {
@@ -231,6 +232,63 @@ img {
 
 .nav-link.active {
   font-weight: 600;
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.portfolio-submenu {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 50%;
+  min-width: 190px;
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.55rem;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, 8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 1100;
+}
+
+.portfolio-submenu::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -14px;
+  height: 14px;
+}
+
+.nav-dropdown:hover .portfolio-submenu,
+.nav-dropdown:focus-within .portfolio-submenu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.portfolio-submenu a {
+  display: block;
+  padding: 0.65rem 0.75rem;
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 0.92rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.portfolio-submenu a:hover,
+.portfolio-submenu a:focus {
+  color: var(--accent-hover);
+  background: rgba(14, 165, 233, 0.08);
 }
 
 /* Fix alignment of Nav List + Language Switcher */
@@ -1403,6 +1461,34 @@ textarea,
     width: 100%;
   }
 
+  .nav-dropdown {
+    display: grid;
+    gap: 0.5rem;
+    justify-items: center;
+  }
+
+  .portfolio-submenu {
+    position: static;
+    width: min(280px, 90%);
+    min-width: 0;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+    box-shadow: none;
+    border-color: rgba(14, 165, 233, 0.18);
+    background: rgba(14, 165, 233, 0.05);
+  }
+
+  .portfolio-submenu::before {
+    content: none;
+  }
+
+  .portfolio-submenu a {
+    text-align: center;
+    white-space: normal;
+  }
+
   .nav-link {
     display: block;
     padding: 0.5rem 0;
@@ -1504,6 +1590,569 @@ textarea,
 .hobby-card p {
   font-size: 0.9rem;
   color: var(--text-secondary);
+}
+
+/* =========================================
+   8. PORTFOLIO COMPETENCES
+   ========================================= */
+.portfolio-page {
+  min-height: calc(100vh - var(--header-height));
+}
+
+.portfolio-header {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.portfolio-eyebrow,
+.competence-step {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  gap: 0.45rem;
+  color: var(--accent-hover);
+  background: rgba(14, 165, 233, 0.08);
+  border: 1px solid rgba(14, 165, 233, 0.18);
+  border-radius: 8px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.portfolio-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.portfolio-menu-card {
+  min-height: 190px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 1.2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+.portfolio-menu-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(14, 165, 233, 0.45);
+  box-shadow: var(--shadow-lg);
+}
+
+.portfolio-menu-card.is-featured {
+  background: linear-gradient(135deg, #ffffff 0%, #eef9ff 100%);
+  border-color: rgba(14, 165, 233, 0.35);
+}
+
+.portfolio-menu-icon {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: #0f766e;
+  background: rgba(20, 184, 166, 0.12);
+  font-size: 1.2rem;
+}
+
+.portfolio-menu-title {
+  align-self: end;
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  line-height: 1.1;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.portfolio-menu-arrow {
+  color: var(--accent-color);
+  font-size: 1rem;
+}
+
+.competence-page {
+  padding-bottom: 5rem;
+}
+
+.competence-hero {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.competence-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.competence-back:hover {
+  color: var(--accent-color);
+}
+
+.competence-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
+  gap: 2rem;
+  align-items: end;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.competence-lead {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 760px;
+}
+
+.competence-summary {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.competence-summary span {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.competence-summary i {
+  color: var(--accent-color);
+  width: 1.2rem;
+  text-align: center;
+}
+
+.competence-content {
+  max-width: 1040px;
+}
+
+.competence-level-card {
+  margin: 1.5rem auto 2rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.competence-level-top {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.competence-level-badge {
+  width: 82px;
+  height: 82px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: white;
+  background: #115e59;
+  box-shadow: 0 12px 24px rgba(17, 94, 89, 0.18);
+}
+
+.competence-level-badge strong {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.competence-level-badge span {
+  margin-top: 0.25rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.competence-level-card h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin-bottom: 0.45rem;
+}
+
+.competence-level-card p {
+  color: var(--text-secondary);
+  margin: 0.15rem 0;
+}
+
+.competence-ac-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.competence-ac-grid-four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.competence-ac-item {
+  min-height: 108px;
+  padding: 1rem;
+  border: 1px solid var(--card-border);
+  border-left: 4px solid #0f766e;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.competence-ac-item span {
+  display: block;
+  margin-bottom: 0.55rem;
+  color: #ea580c;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.competence-ac-item strong {
+  display: block;
+  color: var(--text-primary);
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+
+.competence-evaluation {
+  margin: 1.5rem auto 2rem;
+}
+
+.competence-evaluation h2 {
+  font-family: var(--font-heading);
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.evaluation-table-wrap {
+  overflow-x: auto;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.evaluation-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+}
+
+.evaluation-table th,
+.evaluation-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--card-border);
+  text-align: center;
+}
+
+.evaluation-table thead th {
+  color: white;
+  background: #115e59;
+  font-weight: 700;
+}
+
+.evaluation-table th:first-child {
+  text-align: left;
+  width: 48%;
+}
+
+.evaluation-table tbody th {
+  color: var(--text-primary);
+  font-weight: 500;
+  background: white;
+}
+
+.evaluation-table tbody tr:nth-child(even) th,
+.evaluation-table tbody tr:nth-child(even) td {
+  background: #f8fafc;
+}
+
+.evaluation-table tbody tr:last-child th,
+.evaluation-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.evaluation-table .is-checked span {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  background: var(--accent-color);
+  box-shadow: 0 8px 18px rgba(14, 165, 233, 0.25);
+}
+
+.competence-intro {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  padding: 2rem;
+  margin: 1.5rem auto 1rem;
+}
+
+.competence-intro h2,
+.competence-section h2,
+.competence-reflection h2 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.competence-intro h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.competence-content p {
+  color: var(--text-secondary);
+  margin: 1rem 0;
+}
+
+.competence-section {
+  padding: 3rem 0;
+  border-top: 1px solid var(--card-border);
+}
+
+.competence-section-header {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.competence-section h2 {
+  font-size: clamp(1.7rem, 2.5vw, 2.35rem);
+}
+
+.competence-list {
+  display: grid;
+  gap: 0.7rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.competence-list li {
+  position: relative;
+  color: var(--text-primary);
+  padding-left: 1.5rem;
+}
+
+.competence-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--gradient-2);
+}
+
+.profile-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.profile-column {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--card-border);
+  border-left: 4px solid var(--accent-color);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.profile-column h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.evidence-placeholder {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.evidence-visual {
+  aspect-ratio: 16 / 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  color: var(--text-secondary);
+  background:
+    linear-gradient(135deg, rgba(14, 165, 233, 0.08), rgba(20, 184, 166, 0.1)),
+    #f8fafc;
+  border-bottom: 1px dashed rgba(100, 116, 139, 0.35);
+}
+
+.evidence-visual i {
+  font-size: 2rem;
+  color: var(--accent-color);
+}
+
+.evidence-visual span {
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.evidence-placeholder figcaption {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+.competence-bilan {
+  padding: 3rem 0 0;
+  border-top: 1px solid var(--card-border);
+}
+
+.competence-bilan h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.7rem, 2.5vw, 2.35rem);
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin: 1rem 0 1.5rem;
+}
+
+.bilan-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.bilan-card {
+  padding: 1.35rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-left: 4px solid var(--accent-color);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.bilan-card:last-child {
+  grid-column: 1 / -1;
+}
+
+.bilan-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin-bottom: 0.7rem;
+}
+
+.bilan-card p {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.competence-reflection {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: #0f172a;
+  color: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+}
+
+.competence-reflection .competence-step {
+  color: #67e8f9;
+  background: rgba(103, 232, 249, 0.1);
+  border-color: rgba(103, 232, 249, 0.2);
+  margin-bottom: 1rem;
+}
+
+.competence-reflection h2,
+.competence-reflection .competence-list li {
+  color: white;
+}
+
+.competence-reflection p {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+@media (max-width: 1024px) {
+  .portfolio-menu-grid,
+  .competence-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .competence-summary {
+    max-width: 520px;
+  }
+
+  .competence-ac-grid,
+  .competence-ac-grid-four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .portfolio-menu-grid,
+  .competence-ac-grid,
+  .competence-ac-grid-four,
+  .bilan-grid,
+  .profile-columns,
+  .evidence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bilan-card:last-child {
+    grid-column: auto;
+  }
+
+  .portfolio-menu-card {
+    min-height: 150px;
+  }
+
+  .competence-hero {
+    padding-top: 3rem;
+  }
+
+  .competence-intro,
+  .competence-level-card,
+  .competence-reflection {
+    padding: 1.5rem;
+  }
+
+  .competence-level-top {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* =========================================

@@ -3,7 +3,7 @@
 // =========================================
 const mobileToggle = document.querySelector('.mobile-toggle');
 const nav = document.querySelector('.nav');
-const navLinks = document.querySelectorAll('.nav-link');
+const navLinks = document.querySelectorAll('.nav-link, .portfolio-submenu a');
 
 mobileToggle.addEventListener('click', () => {
     nav.classList.toggle('active');

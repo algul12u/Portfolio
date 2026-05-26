@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;">
+
+    <meta name="description" content="Compétence 6 du portfolio de Sefer Algul : Collaborer au sein d'une équipe informatique.">
+    <title>Compétence 6 | Portfolio - Sefer Algul</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="DataSpaceSefer Logo" class="logo-img">
+                DataSpace<span class="highlight">Sefer</span>
+            </a>
+
+            <button class="mobile-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav.about">À Propos</a></li>
+                    <li><a href="skills.html" class="nav-link" data-i18n="nav.skills">Compétences</a></li>
+                    <li><a href="projects.html" class="nav-link" data-i18n="nav.projects">Projets</a></li>
+                    <li class="nav-dropdown">
+                        <a href="portfolio.html" class="nav-link active" data-i18n="nav.portfolio">Portfolio</a>
+                        <ul class="portfolio-submenu" aria-label="Sous-menu Portfolio">
+                            <li><a href="competence1.html">Compétence 1</a></li>
+                            <li><a href="competence2.html">Compétence 2</a></li>
+                            <li><a href="competence6.html">Compétence 6</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="cta-btn" data-i18n="nav.contact">Me Contacter</a></li>
+                </ul>
+
+                <div class="language-selector">
+                    <div class="selected-lang">
+                        <img src="https://flagcdn.com/w40/fr.png" class="lang-flag" id="current-flag" alt="FR">
+                        <span id="current-lang">FR</span>
+                        <i class="fas fa-chevron-down lang-chevron"></i>
+                    </div>
+
+                    <div class="lang-dropdown">
+                        <a href="#" class="lang-option" data-lang="fr">
+                            <img src="https://flagcdn.com/w40/fr.png" class="lang-flag" alt="Drapeau Français"> FR
+                        </a>
+                        <a href="#" class="lang-option" data-lang="tr">
+                            <img src="https://flagcdn.com/w40/tr.png" class="lang-flag" alt="Drapeau Turc"> TR
+                        </a>
+                        <a href="#" class="lang-option" data-lang="en">
+                            <img src="https://flagcdn.com/w40/gb.png" class="lang-flag" alt="Drapeau Anglais"> EN
+                        </a>
+                        <a href="#" class="lang-option" data-lang="de">
+                            <img src="https://flagcdn.com/w40/de.png" class="lang-flag" alt="Drapeau Allemand"> DE
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="competence-page">
+        <section class="container competence-hero">
+            <a href="portfolio.html" class="competence-back">
+                <i class="fas fa-arrow-left"></i>
+                Retour au portfolio
+            </a>
+
+            <div class="competence-hero-grid">
+                <div>
+                    <span class="portfolio-eyebrow">Compétence 6</span>
+                    <h1 class="page-title">
+                        Collaborer au sein d'une équipe informatique
+                    </h1>
+                    <p class="competence-lead">
+                        Auto-positionnement, communication professionnelle, organisation projet, documentation utilisateur et collaboration technique.
+                    </p>
+                </div>
+
+                <div class="competence-summary">
+                    <span><i class="fas fa-comments"></i> Communication métier</span>
+                    <span><i class="fas fa-list-check"></i> Gestion des priorités</span>
+                    <span><i class="fas fa-book-open"></i> Documentation SDR</span>
+                    <span><i class="fab fa-gitlab"></i> Travail collaboratif</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="container competence-content">
+            <article class="competence-level-card">
+                <div class="competence-level-top">
+                    <div class="competence-level-badge">
+                        <strong>3</strong>
+                        <span>Niveau</span>
+                    </div>
+                    <div>
+                        <h2>Manager une équipe informatique</h2>
+                        <p>Veille · Innovation · Conduite du changement</p>
+                        <p>Niveau atteint en 3e année de BUT Informatique.</p>
+                    </div>
+                </div>
+
+                <div class="competence-ac-grid competence-ac-grid-four">
+                    <div class="competence-ac-item">
+                        <span>AC 1</span>
+                        <strong>Organiser et partager une veille numérique</strong>
+                    </div>
+                    <div class="competence-ac-item">
+                        <span>AC 2</span>
+                        <strong>Identifier les enjeux de l'économie de l'innovation numérique</strong>
+                    </div>
+                    <div class="competence-ac-item">
+                        <span>AC 3</span>
+                        <strong>Guider la conduite du changement informatique</strong>
+                    </div>
+                    <div class="competence-ac-item">
+                        <span>AC 4</span>
+                        <strong>Accompagner le management de projet informatique</strong>
+                    </div>
+                </div>
+            </article>
+
+            <article class="competence-evaluation">
+                <h2>Tableau d'auto-évaluation</h2>
+                <div class="evaluation-table-wrap">
+                    <table class="evaluation-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Critère d'évaluation</th>
+                                <th scope="col">Insuffisant</th>
+                                <th scope="col">Bien</th>
+                                <th scope="col">Très bien</th>
+                                <th scope="col">Excellent</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Appréhender l'écosystème numérique</th>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Très bien"><i class="fas fa-check"></i></span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Découvrir les aptitudes requises selon les différents secteurs informatiques</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Excellent"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Identifier les statuts, les fonctions et les rôles de chaque membre d'une équipe pluridisciplinaire</th>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Très bien"><i class="fas fa-check"></i></span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Acquérir les compétences interpersonnelles pour travailler en équipe</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Excellent"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Comprendre la diversité, la structure et la dimension de l'informatique dans une organisation</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Excellent"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Appliquer une démarche pour intégrer une équipe informatique au sein d'une organisation</th>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Très bien"><i class="fas fa-check"></i></span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Mobiliser les compétences interpersonnelles pour intégrer une équipe informatique</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Excellent"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Rendre compte de son activité professionnelle</th>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Bien"><i class="fas fa-check"></i></span></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Organiser et partager une veille numérique</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Excellent"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Identifier les enjeux de l'économie de l'innovation numérique</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Excellent"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Guider la conduite du changement informatique au sein d'une organisation</th>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Très bien"><i class="fas fa-check"></i></span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Accompagner le management de projet informatique</th>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Très bien"><i class="fas fa-check"></i></span></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <article class="competence-intro">
+                <h2>Auto-positionnement</h2>
+                <p>
+                    Durant ma troisième année de BUT Informatique, j’ai développé ma capacité à travailler dans un environnement collaboratif, à organiser mon travail selon des contraintes réelles et à communiquer avec différents acteurs d’un projet informatique. J’ai appris à adapter mon discours selon les interlocuteurs, à prendre en compte les besoins utilisateurs et à gérer plusieurs missions simultanément. Je considère avoir fortement progressé sur la communication professionnelle et l’organisation projet, tout en souhaitant encore approfondir certaines pratiques avancées de pilotage d’équipe et de gestion de projet à grande échelle.
+                </p>
+            </article>
+
+            <article class="competence-section">
+                <div class="competence-section-header">
+                    <span class="competence-step">Situation 1</span>
+                    <h2>Stage Itelcom — Communication avec les utilisateurs et analyse des besoins</h2>
+                </div>
+
+                <p>
+                    Durant mon stage chez Itelcom, une partie importante de mon travail reposait sur les échanges avec les utilisateurs et les membres de la DSI. Les demandes provenaient directement des agents ou des équipes métier et concernaient des besoins variés : évolution de scripts internes, automatisation SDR ou développement du projet FDT.
+                </p>
+
+                <p>Avant chaque développement ou modification, une phase d’analyse était nécessaire afin de comprendre :</p>
+
+                <ul class="competence-list">
+                    <li>les besoins métier ;</li>
+                    <li>les contraintes existantes ;</li>
+                    <li>les problèmes rencontrés ;</li>
+                    <li>les améliorations attendues.</li>
+                </ul>
+
+                <p>
+                    Cette dimension humaine du projet m’a particulièrement fait progresser.
+                </p>
+
+                <p>
+                    Il ne suffisait pas uniquement de produire une solution techniquement correcte : il fallait proposer une solution réellement adaptée au fonctionnement quotidien des utilisateurs.
+                </p>
+
+                <p>Les échanges réguliers avec mon tuteur et les agents permettaient :</p>
+
+                <ul class="competence-list">
+                    <li>d’affiner les besoins ;</li>
+                    <li>de valider certaines fonctionnalités ;</li>
+                    <li>d’identifier des améliorations ;</li>
+                    <li>d’adapter progressivement les développements.</li>
+                </ul>
+
+                <p>
+                    Cette expérience m’a permis de développer ma capacité à communiquer avec des profils non techniques et à intégrer leurs retours dans le cycle de développement.
+                </p>
+
+                <div class="evidence-grid" aria-label="Preuves à mettre pour la communication avec les utilisateurs">
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 1</span></div>
+                        <figcaption>Extrait document analyse besoins / projet FDT.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 2</span></div>
+                        <figcaption>Capture fonctionnalité développée suite à besoin utilisateur.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 3</span></div>
+                        <figcaption>Extrait rapport montrant échanges métier / validation.</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article class="competence-section">
+                <div class="competence-section-header">
+                    <span class="competence-step">Situation 2</span>
+                    <h2>Stage Itelcom — Gestion des priorités et organisation professionnelle</h2>
+                </div>
+
+                <p>
+                    L’environnement de stage était particulièrement dynamique.
+                </p>
+
+                <p>Plusieurs projets évoluaient simultanément :</p>
+
+                <ul class="competence-list">
+                    <li>développement du projet FDT ;</li>
+                    <li>modifications de scripts ;</li>
+                    <li>passages SDR ;</li>
+                    <li>documentation utilisateur ;</li>
+                    <li>tâches ponctuelles données par le tuteur.</li>
+                </ul>
+
+                <p>
+                    Certaines demandes nécessitaient une intervention rapide tandis que le projet principal devait continuer à avancer.
+                </p>
+
+                <div class="profile-columns">
+                    <section class="profile-column">
+                        <h3>Contraintes à gérer</h3>
+                        <ul class="competence-list">
+                            <li>les urgences ;</li>
+                            <li>la planification personnelle ;</li>
+                            <li>les changements de priorité ;</li>
+                            <li>l’organisation de mon temps.</li>
+                        </ul>
+                    </section>
+
+                    <section class="profile-column">
+                        <h3>Apprentissages</h3>
+                        <ul class="competence-list">
+                            <li>à réorganiser mon travail rapidement ;</li>
+                            <li>à prioriser certaines tâches ;</li>
+                            <li>à découper les développements progressivement ;</li>
+                            <li>à maintenir un suivi régulier de l’avancement.</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <p>
+                    Cette expérience m’a confronté au fonctionnement réel d’un service informatique d’entreprise dans lequel plusieurs besoins métier coexistent en permanence.
+                </p>
+
+                <p>
+                    Cela a renforcé mon autonomie et ma capacité d’adaptation dans un environnement professionnel réel.
+                </p>
+
+                <div class="evidence-grid" aria-label="Preuves à mettre pour la gestion des priorités">
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 4</span></div>
+                        <figcaption>Extrait rapport — gestion priorités.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 5</span></div>
+                        <figcaption>Tableau personnel de suivi tâches / notes organisationnelles.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 6</span></div>
+                        <figcaption>Capture GitLab / historique versions / suivi modifications.</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article class="competence-section">
+                <div class="competence-section-header">
+                    <span class="competence-step">Situation 3</span>
+                    <h2>Stage Itelcom — Documentation utilisateur SDR</h2>
+                </div>
+
+                <p>
+                    Une autre mission importante de mon stage concernait la rédaction d’une documentation utilisateur SDR destinée aux agents.
+                </p>
+
+                <p>Cette documentation expliquait notamment :</p>
+
+                <ul class="competence-list">
+                    <li>fonctionnement général du tableau SDR ;</li>
+                    <li>suivi des relances ;</li>
+                    <li>planning des astreintes ;</li>
+                    <li>actions disponibles pour les utilisateurs.</li>
+                </ul>
+
+                <p>
+                    Cette mission m’a permis de travailler un aspect souvent sous-estimé du métier informatique : la transmission des connaissances.
+                </p>
+
+                <p>
+                    Il ne s’agissait pas d’une documentation technique pour développeurs mais d’une documentation fonctionnelle destinée à faciliter la prise en main d’un outil métier.
+                </p>
+
+                <p>J’ai dû réfléchir :</p>
+
+                <ul class="competence-list">
+                    <li>à la clarté des explications ;</li>
+                    <li>à l’organisation des informations ;</li>
+                    <li>à l’accessibilité du vocabulaire ;</li>
+                    <li>aux besoins réels des utilisateurs.</li>
+                </ul>
+
+                <p>
+                    Cette expérience a développé ma capacité à produire une communication technique compréhensible pour un public non développeur.
+                </p>
+
+                <div class="evidence-grid" aria-label="Preuves à mettre pour la documentation SDR">
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 7</span></div>
+                        <figcaption>Capture documentation SDR.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 8</span></div>
+                        <figcaption>Capture tableau SDR expliqué dans documentation.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 9</span></div>
+                        <figcaption>Exemple procédure utilisateur.</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article class="competence-section">
+                <div class="competence-section-header">
+                    <span class="competence-step">Situation 4</span>
+                    <h2>SAE5 / SAE6 — Travail collaboratif et environnement projet</h2>
+                </div>
+
+                <p>
+                    Dans les SAE5 et SAE6 Jardins de Cocagne, le projet était mené en binôme dans un cadre proche d’un projet professionnel.
+                </p>
+
+                <p>Le travail nécessitait :</p>
+
+                <ul class="competence-list">
+                    <li>coordination entre membres du groupe ;</li>
+                    <li>partage des tâches ;</li>
+                    <li>suivi des développements ;</li>
+                    <li>justification des choix techniques ;</li>
+                    <li>organisation du dépôt GitLab ;</li>
+                    <li>environnement collaboratif.</li>
+                </ul>
+
+                <p>Nous avons utilisé :</p>
+
+                <ul class="competence-list">
+                    <li>GitLab pour le versionning et la collaboration ;</li>
+                    <li>Docker pour homogénéiser les environnements ;</li>
+                    <li>outils de documentation et de justification technique.</li>
+                </ul>
+
+                <p>
+                    La réalisation du cahier des charges technique, de la proposition financière et des documents projet m’a également sensibilisé à une dimension plus globale du management informatique : un projet ne repose pas uniquement sur le développement, mais également sur :
+                </p>
+
+                <ul class="competence-list">
+                    <li>l’estimation ;</li>
+                    <li>la planification ;</li>
+                    <li>l’argumentation technique ;</li>
+                    <li>la communication client ;</li>
+                    <li>la justification économique.</li>
+                </ul>
+
+                <p>
+                    La SAE6 a prolongé cette logique en faisant évoluer la solution vers une version mobile avec de nouveaux besoins fonctionnels (client / livreur / QRCode / suivi tournée).
+                </p>
+
+                <p>
+                    Cette continuité m’a appris à faire évoluer un projet collectif tout en conservant une cohérence globale.
+                </p>
+
+                <div class="evidence-grid" aria-label="Preuves à mettre pour le travail collaboratif">
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 10</span></div>
+                        <figcaption>Slide environnement collaboratif GitLab / Docker.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 11</span></div>
+                        <figcaption>Proposition financière / estimation charges projet.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 12</span></div>
+                        <figcaption>Répartition travail projet / documents techniques.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 13</span></div>
+                        <figcaption>Historique GitLab / commits équipe.</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article class="competence-bilan">
+                <span class="competence-step">Bilan complémentaire</span>
+                <h2>Ressources mobilisées et recul</h2>
+
+                <div class="bilan-grid">
+                    <section class="bilan-card">
+                        <h3>Évolution constatée</h3>
+                        <p>
+                            Avant ces expériences, je voyais surtout le projet informatique sous l’angle du développement. Le stage Itelcom m’a montré l’importance de comprendre les utilisateurs, d’adapter mon discours, de gérer plusieurs demandes et de documenter les outils. Les SAE5 et SAE6 ont complété cette progression par le travail collaboratif et le suivi de projet.
+                        </p>
+                    </section>
+
+                    <section class="bilan-card">
+                        <h3>Ressources mobilisées en formation</h3>
+                        <p>
+                            J’ai mobilisé les enseignements de communication professionnelle, de gestion de projet, de conduite de réunion, d’analyse des besoins, de documentation, de versionning Git et d’organisation collaborative. La proposition financière et les documents projet m’ont aussi aidé à comprendre la dimension économique d’un projet.
+                        </p>
+                    </section>
+
+                    <section class="bilan-card">
+                        <h3>Ressources cherchées en autonomie</h3>
+                        <p>
+                            En stage, j’ai dû m’appuyer sur les documents internes Itelcom, les échanges avec mon tuteur, les retours des agents, les exemples de documentation SDR et l’historique des outils existants. Ces ressources m’ont permis de produire une communication adaptée à un public non technique.
+                        </p>
+                    </section>
+
+                    <section class="bilan-card">
+                        <h3>Meilleure maîtrise acquise</h3>
+                        <p>
+                            Ces expériences m’ont permis de mieux maîtriser l’organisation d’un travail informatique en équipe : transformer un besoin utilisateur en action concrète, prioriser les demandes, rendre compte de l’avancement et produire une documentation utile.
+                        </p>
+                    </section>
+
+                    <section class="bilan-card">
+                        <h3>Si c’était à refaire</h3>
+                        <p>
+                            Je mettrais en place plus tôt un suivi formalisé des demandes, avec comptes rendus courts, priorités, responsables et validations utilisateurs. Cela faciliterait la communication, la traçabilité et la gestion des changements.
+                        </p>
+                    </section>
+                </div>
+            </article>
+
+            <article class="competence-reflection">
+                <span class="competence-step">Analyse réflexive</span>
+                <h2>Recul personnel</h2>
+                <p>
+                    Ces différentes expériences m’ont permis de comprendre que le management informatique ne se limite pas à la gestion hiérarchique d’une équipe.
+                </p>
+
+                <p>Il implique également :</p>
+
+                <ul class="competence-list">
+                    <li>comprendre les besoins utilisateurs ;</li>
+                    <li>communiquer efficacement ;</li>
+                    <li>organiser les développements ;</li>
+                    <li>prioriser les tâches ;</li>
+                    <li>documenter les outils ;</li>
+                    <li>travailler dans un cadre collaboratif.</li>
+                </ul>
+
+                <p>
+                    Le stage chez Itelcom m’a particulièrement confronté à ces réalités professionnelles. Les échanges avec les agents, la documentation SDR et la gestion simultanée de plusieurs missions m’ont permis de développer une approche plus mature du travail en équipe et de la communication professionnelle.
+                </p>
+
+                <p>
+                    Les SAE5 et SAE6 m’ont apporté une expérience complémentaire autour de la collaboration projet, du partage des responsabilités et de l’organisation technique.
+                </p>
+
+                <p>
+                    Aujourd’hui, je me sens plus à l’aise dans un environnement collaboratif informatique et plus conscient des enjeux organisationnels, humains et communicationnels liés à la réussite d’un projet.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

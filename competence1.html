@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;">
+
+    <meta name="description" content="Compétence 1 du portfolio de Sefer Algul : Réaliser un développement d'application">
+    <title>Compétence 1 | Portfolio - Sefer Algul</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="DataSpaceSefer Logo" class="logo-img">
+                DataSpace<span class="highlight">Sefer</span>
+            </a>
+
+            <button class="mobile-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav.about">À Propos</a></li>
+                    <li><a href="skills.html" class="nav-link" data-i18n="nav.skills">Compétences</a></li>
+                    <li><a href="projects.html" class="nav-link" data-i18n="nav.projects">Projets</a></li>
+                    <li class="nav-dropdown">
+                        <a href="portfolio.html" class="nav-link active" data-i18n="nav.portfolio">Portfolio</a>
+                        <ul class="portfolio-submenu" aria-label="Sous-menu Portfolio">
+                            <li><a href="competence1.html">Compétence 1</a></li>
+                            <li><a href="competence2.html">Compétence 2</a></li>
+                            <li><a href="competence6.html">Compétence 6</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="cta-btn" data-i18n="nav.contact">Me Contacter</a></li>
+                </ul>
+
+                <div class="language-selector">
+                    <div class="selected-lang">
+                        <img src="https://flagcdn.com/w40/fr.png" class="lang-flag" id="current-flag" alt="FR">
+                        <span id="current-lang">FR</span>
+                        <i class="fas fa-chevron-down lang-chevron"></i>
+                    </div>
+
+                    <div class="lang-dropdown">
+                        <a href="#" class="lang-option" data-lang="fr">
+                            <img src="https://flagcdn.com/w40/fr.png" class="lang-flag" alt="Drapeau Français"> FR
+                        </a>
+                        <a href="#" class="lang-option" data-lang="tr">
+                            <img src="https://flagcdn.com/w40/tr.png" class="lang-flag" alt="Drapeau Turc"> TR
+                        </a>
+                        <a href="#" class="lang-option" data-lang="en">
+                            <img src="https://flagcdn.com/w40/gb.png" class="lang-flag" alt="Drapeau Anglais"> EN
+                        </a>
+                        <a href="#" class="lang-option" data-lang="de">
+                            <img src="https://flagcdn.com/w40/de.png" class="lang-flag" alt="Drapeau Allemand"> DE
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="competence-page">
+        <section class="container competence-hero">
+            <a href="portfolio.html" class="competence-back">
+                <i class="fas fa-arrow-left"></i>
+                Retour au portfolio
+            </a>
+
+            <div class="competence-hero-grid">
+                <div>
+                    <span class="portfolio-eyebrow">Compétence 1</span>
+                    <h1 class="page-title">
+                        Réaliser un développement d'application
+                    </h1>
+                    <p class="competence-lead">
+                        Auto-positionnement, situations significatives et preuves associées à l'évolution d'applications web et mobiles.
+                    </p>
+                </div>
+
+                <div class="competence-summary">
+                    <span><i class="fab fa-symfony"></i> Symfony / Twig</span>
+                    <span><i class="fab fa-docker"></i> Docker / CI-CD</span>
+                    <span><i class="fas fa-mobile-screen"></i> Mobile</span>
+                    <span><i class="fas fa-database"></i> MySQL / SleekDB</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="container competence-content">
+            <article class="competence-level-card">
+                <div class="competence-level-top">
+                    <div class="competence-level-badge">
+                        <strong>3</strong>
+                        <span>Niveau</span>
+                    </div>
+                    <div>
+                        <h2>Adapter des applications sur un ensemble de supports</h2>
+                        <p>Embarqué · Web · Mobile · IoT</p>
+                        <p>Niveau atteint en 3e année de BUT Informatique.</p>
+                    </div>
+                </div>
+
+                <div class="competence-ac-grid">
+                    <div class="competence-ac-item">
+                        <span>AC 1</span>
+                        <strong>Choisir et implémenter les architectures adaptées</strong>
+                    </div>
+                    <div class="competence-ac-item">
+                        <span>AC 2</span>
+                        <strong>Faire évoluer une application existante</strong>
+                    </div>
+                    <div class="competence-ac-item">
+                        <span>AC 3</span>
+                        <strong>Intégrer des solutions dans un environnement de production</strong>
+                    </div>
+                </div>
+            </article>
+
+            <article class="competence-evaluation">
+                <h2>Tableau d'auto-évaluation</h2>
+                <div class="evaluation-table-wrap">
+                    <table class="evaluation-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Critère d'évaluation</th>
+                                <th scope="col">Insuffisant</th>
+                                <th scope="col">Bien</th>
+                                <th scope="col">Très bien</th>
+                                <th scope="col">Excellent</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Implémenter des conceptions simples</th>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Très bien"><i class="fas fa-check"></i></span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Élaborer des conceptions simples</th>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Très bien"><i class="fas fa-check"></i></span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Faire des essais et évaluer leurs résultats en regard des spécifications</th>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Très bien"><i class="fas fa-check"></i></span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Développer des interfaces utilisateurs</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Excellent"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Élaborer et implémenter les spécifications fonctionnelles et non fonctionnelles à partir des exigences</th>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Très bien"><i class="fas fa-check"></i></span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Appliquer des principes d'accessibilité et d'ergonomie</th>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Très bien"><i class="fas fa-check"></i></span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Adopter de bonnes pratiques de conception et de programmation</th>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Très bien"><i class="fas fa-check"></i></span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Vérifier et valider la qualité de l'application par les tests</th>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Très bien"><i class="fas fa-check"></i></span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Choisir et implémenter les architectures adaptées</th>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Très bien"><i class="fas fa-check"></i></span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Faire évoluer une application existante</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Excellent"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Intégrer des solutions dans un environnement de production</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Excellent"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <article class="competence-intro">
+                <h2>Auto-positionnement</h2>
+                <p>
+                    Au cours de ma troisième année de BUT Informatique, j’ai développé ma capacité à adapter des applications à différents contextes techniques et supports. Je suis aujourd’hui capable de choisir une architecture adaptée aux besoins d’un projet, d’intégrer plusieurs technologies cohérentes entre elles et de faire évoluer une application existante tout en conservant sa maintenabilité. Je considère néanmoins pouvoir encore progresser sur certains aspects liés au déploiement avancé et à l’industrialisation complète des environnements de production.
+                </p>
+            </article>
+
+            <article class="competence-section">
+                <div class="competence-section-header">
+                    <span class="competence-step">Situation 1</span>
+                    <h2>SAE 5 : Développement avancé — Jardins de Cocagne</h2>
+                </div>
+
+                <p>
+                    Dans le cadre de la SAE5, mon groupe et moi avons développé une application destinée aux Jardins de Cocagne afin de gérer les adhérents, les paniers, les dépôts, les tournées et les livraisons. L’objectif était de proposer une solution web robuste, évolutive et adaptée à des besoins métiers relativement complexes.
+                </p>
+
+                <p>Pour répondre à ces contraintes, nous avons choisi une architecture reposant sur :</p>
+
+                <ul class="competence-list">
+                    <li>Symfony pour le backend ;</li>
+                    <li>Twig pour le rendu des interfaces ;</li>
+                    <li>Bootstrap pour le responsive design ;</li>
+                    <li>MySQL pour la persistance des données ;</li>
+                    <li>Docker / Docker Compose pour la conteneurisation ;</li>
+                    <li>GitLab pour le versionning et l’environnement collaboratif.</li>
+                </ul>
+
+                <p>
+                    Ce projet m’a permis de comprendre qu’une application ne doit pas uniquement fonctionner techniquement : son architecture doit aussi faciliter la maintenance, les évolutions futures et le travail collaboratif.
+                </p>
+
+                <p>
+                    J’ai participé à la réflexion sur les choix technologiques et sur la structuration générale du projet. Le recours à Symfony et au modèle MVC permettait une séparation claire entre logique métier, accès aux données et interface utilisateur. Cette organisation facilitait la compréhension du code et sa réutilisation future.
+                </p>
+
+                <p>
+                    L’utilisation de Docker représentait également un apprentissage important. La conteneurisation permettait de reproduire le même environnement de développement sur plusieurs machines et de limiter les problèmes liés aux différences de configuration entre développeurs. Nous avons aussi intégré une logique de CI/CD via GitLab afin de préparer un environnement proche de la production.
+                </p>
+
+                <p>
+                    Cette SAE m’a donc permis de développer l’AC « Choisir et implémenter les architectures adaptées » ainsi que « Intégrer des solutions dans un environnement de production ».
+                </p>
+
+                <div class="evidence-grid" aria-label="Preuves à mettre pour la SAE 5">
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 1</span></div>
+                        <figcaption>Schéma / capture de la modélisation BDD (MCD / E-A). Preuve architecture données.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 2</span></div>
+                        <figcaption>Slide Technologies retenues (Symfony / Bootstrap / MySQL / Twig).</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 3</span></div>
+                        <figcaption>Capture Docker Compose / GitLab / environnement collaboratif.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 4</span></div>
+                        <figcaption>Capture interface administration (gestion dépôts / tournées / paniers).</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article class="competence-section">
+                <div class="competence-section-header">
+                    <span class="competence-step">Situation 2</span>
+                    <h2>SAE 6 : Évolution mobile de l’application</h2>
+                </div>
+
+                <p>
+                    La SAE6 consistait à faire évoluer l’application développée en SAE5 vers une version adaptée au mobile.
+                </p>
+
+                <p>
+                    L’objectif n’était plus simplement de maintenir une application web existante mais de l’adapter à de nouveaux usages utilisateurs.
+                </p>
+
+                <p>Deux profils distincts étaient pris en compte :</p>
+
+                <div class="profile-columns">
+                    <section class="profile-column">
+                        <h3>Partie client</h3>
+                        <ul class="competence-list">
+                            <li>consultation des tournées ;</li>
+                            <li>suivi du livreur ;</li>
+                            <li>visualisation des livraisons ;</li>
+                            <li>QRCode panier ;</li>
+                            <li>informations et statut de livraison.</li>
+                        </ul>
+                    </section>
+
+                    <section class="profile-column">
+                        <h3>Partie livreur</h3>
+                        <ul class="competence-list">
+                            <li>gestion de tournée ;</li>
+                            <li>ordre des dépôts ;</li>
+                            <li>scan QRCode ;</li>
+                            <li>validation des livraisons ;</li>
+                            <li>suivi d’avancement.</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <p>
+                    Cette SAE m’a particulièrement permis de comprendre la notion d’adaptation multi-support.
+                </p>
+
+                <p>Il ne s’agissait pas uniquement de « recopier » l’application web sur téléphone, mais de repenser certaines fonctionnalités pour répondre aux contraintes mobiles :</p>
+
+                <ul class="competence-list">
+                    <li>ergonomie tactile ;</li>
+                    <li>affichage simplifié ;</li>
+                    <li>rapidité d’accès aux données ;</li>
+                    <li>interactions terrain du livreur ;</li>
+                    <li>utilisation du QRCode et du suivi de tournée.</li>
+                </ul>
+
+                <p>
+                    Cette expérience m’a fait progresser sur l’AC « Faire évoluer une application existante ». J’ai compris qu’une évolution applicative implique souvent une remise en question de l’architecture initiale et une adaptation des fonctionnalités selon le contexte d’utilisation.
+                </p>
+
+                <div class="evidence-grid" aria-label="Preuves à mettre pour la SAE 6">
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 5</span></div>
+                        <figcaption>Maquette / interface mobile client.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 6</span></div>
+                        <figcaption>Interface livreur — gestion tournée.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 7</span></div>
+                        <figcaption>Capture QRCode panier / scan livraison.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 8</span></div>
+                        <figcaption>Capture suivi tournée / localisation.</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article class="competence-section">
+                <div class="competence-section-header">
+                    <span class="competence-step">Situation 3</span>
+                    <h2>Stage 2026 — DSI Itelcom — Projet FDT</h2>
+                </div>
+
+                <p>
+                    Durant mon stage chez Itelcom, j’ai développé un projet de dématérialisation de fiches de tâches (FDT) visant à remplacer un fonctionnement papier par une application web complète.
+                </p>
+
+                <p>J’ai entièrement développé ce projet :</p>
+
+                <ul class="competence-list">
+                    <li>frontend HTML / CSS / JavaScript ;</li>
+                    <li>backend PHP ;</li>
+                    <li>stockage SleekDB ;</li>
+                    <li>formulaires dynamiques ;</li>
+                    <li>historique ;</li>
+                    <li>archivage ;</li>
+                    <li>collaboration utilisateur ;</li>
+                    <li>sauvegarde automatique.</li>
+                </ul>
+
+                <p>
+                    L’un des enjeux principaux concernait la flexibilité du système.
+                </p>
+
+                <p>
+                    L’application devait pouvoir gérer plusieurs types de formulaires sans nécessiter une réécriture complète du code. Cette contrainte m’a amené à réfléchir davantage à l’organisation de l’application et à la structuration des données afin de rendre l’outil maintenable et évolutif.
+                </p>
+
+                <p>
+                    J’ai également découvert l’importance d’adapter une application non seulement à des contraintes techniques mais également à son public utilisateur. Les utilisateurs n’étaient pas nécessairement issus du domaine informatique. L’ergonomie et la simplicité d’utilisation constituaient donc des critères essentiels.
+                </p>
+
+                <p>
+                    Cette expérience a renforcé ma capacité à concevoir des applications adaptées à un contexte métier réel.
+                </p>
+
+                <div class="evidence-grid" aria-label="Preuves à mettre pour le stage 2026">
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 9</span></div>
+                        <figcaption>Capture application FDT.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 10</span></div>
+                        <figcaption>Capture formulaire dynamique.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 11</span></div>
+                        <figcaption>Historique / suivi modifications.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 12</span></div>
+                        <figcaption>Extrait code PHP / JS démontrant logique dynamique.</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article class="competence-bilan">
+                <span class="competence-step">Bilan complémentaire</span>
+                <h2>Ressources mobilisées et recul</h2>
+
+                <div class="bilan-grid">
+                    <section class="bilan-card">
+                        <h3>Évolution constatée</h3>
+                        <p>
+                            Au début, je savais surtout développer des fonctionnalités isolées. Avec la SAE5, j’ai appris à raisonner en architecture complète : backend Symfony, base de données, interfaces Twig et environnement Docker. La SAE6 m’a ensuite obligé à penser l’évolution mobile, et le stage FDT m’a confronté à une adaptation métier réelle avec des formulaires dynamiques.
+                        </p>
+                    </section>
+
+                    <section class="bilan-card">
+                        <h3>Ressources mobilisées en formation</h3>
+                        <p>
+                            J’ai mobilisé les enseignements de développement web, de bases de données, de conception MVC, d’IHM, de gestion de projet, de versionning Git et de qualité logicielle. Ces ressources m’ont aidé à structurer les données, organiser le code et justifier les choix techniques.
+                        </p>
+                    </section>
+
+                    <section class="bilan-card">
+                        <h3>Ressources cherchées en autonomie</h3>
+                        <p>
+                            En complément, j’ai utilisé la documentation de Symfony, Twig, Bootstrap, Docker Compose, GitLab CI/CD, PHP, JavaScript et SleekDB. Durant le stage, j’ai aussi dû m’appuyer sur les règles métier internes et les retours des utilisateurs.
+                        </p>
+                    </section>
+
+                    <section class="bilan-card">
+                        <h3>Meilleure maîtrise acquise</h3>
+                        <p>
+                            Ces expériences m’ont permis de mieux comprendre l’intérêt des notions vues en cours. Le MVC n’était plus seulement un principe théorique : il devenait une façon concrète de rendre une application maintenable. Docker, GitLab et les maquettes mobiles ont aussi pris du sens dans un contexte projet réel.
+                        </p>
+                    </section>
+
+                    <section class="bilan-card">
+                        <h3>Si c’était à refaire</h3>
+                        <p>
+                            Je préparerais plus tôt une documentation technique de l’architecture, un plan de tests et une réflexion mobile dès la conception initiale. Cela permettrait de faciliter l’évolution vers de nouveaux supports et de mieux anticiper le déploiement.
+                        </p>
+                    </section>
+                </div>
+            </article>
+
+            <article class="competence-reflection">
+                <span class="competence-step">Analyse réflexive</span>
+                <h2>Recul personnel</h2>
+                <p>
+                    Ces différentes expériences m’ont permis de comprendre qu’adapter une application ne consiste pas uniquement à coder des fonctionnalités.
+                </p>
+
+                <p>Il faut être capable :</p>
+
+                <ul class="competence-list">
+                    <li>d’analyser le besoin réel ;</li>
+                    <li>de choisir les technologies adaptées ;</li>
+                    <li>de concevoir une architecture maintenable ;</li>
+                    <li>de prendre en compte l’environnement technique ;</li>
+                    <li>d’adapter l’application à ses utilisateurs et à ses supports.</li>
+                </ul>
+
+                <p>
+                    La SAE5 m’a davantage apporté une compréhension architecturale et environnementale. La SAE6 m’a appris l’évolution multi-support. Le stage m’a confronté à une adaptation métier réelle avec des contraintes utilisateurs fortes.
+                </p>
+
+                <p>
+                    Aujourd’hui, je me sens plus à l’aise pour concevoir ou faire évoluer une application web ou mobile en tenant compte des enjeux de maintenabilité, d’ergonomie et d’intégration technique.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

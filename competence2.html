@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;">
+
+    <meta name="description" content="Compétence 2 du portfolio de Sefer Algul : optimiser des applications.">
+    <title>Compétence 2 | Portfolio - Sefer Algul</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="blob-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="DataSpaceSefer Logo" class="logo-img">
+                DataSpace<span class="highlight">Sefer</span>
+            </a>
+
+            <button class="mobile-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav.about">À Propos</a></li>
+                    <li><a href="skills.html" class="nav-link" data-i18n="nav.skills">Compétences</a></li>
+                    <li><a href="projects.html" class="nav-link" data-i18n="nav.projects">Projets</a></li>
+                    <li class="nav-dropdown">
+                        <a href="portfolio.html" class="nav-link active" data-i18n="nav.portfolio">Portfolio</a>
+                        <ul class="portfolio-submenu" aria-label="Sous-menu Portfolio">
+                            <li><a href="competence1.html">Compétence 1</a></li>
+                            <li><a href="competence2.html">Compétence 2</a></li>
+                            <li><a href="competence6.html">Compétence 6</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="cta-btn" data-i18n="nav.contact">Me Contacter</a></li>
+                </ul>
+
+                <div class="language-selector">
+                    <div class="selected-lang">
+                        <img src="https://flagcdn.com/w40/fr.png" class="lang-flag" id="current-flag" alt="FR">
+                        <span id="current-lang">FR</span>
+                        <i class="fas fa-chevron-down lang-chevron"></i>
+                    </div>
+
+                    <div class="lang-dropdown">
+                        <a href="#" class="lang-option" data-lang="fr">
+                            <img src="https://flagcdn.com/w40/fr.png" class="lang-flag" alt="Drapeau Français"> FR
+                        </a>
+                        <a href="#" class="lang-option" data-lang="tr">
+                            <img src="https://flagcdn.com/w40/tr.png" class="lang-flag" alt="Drapeau Turc"> TR
+                        </a>
+                        <a href="#" class="lang-option" data-lang="en">
+                            <img src="https://flagcdn.com/w40/gb.png" class="lang-flag" alt="Drapeau Anglais"> EN
+                        </a>
+                        <a href="#" class="lang-option" data-lang="de">
+                            <img src="https://flagcdn.com/w40/de.png" class="lang-flag" alt="Drapeau Allemand"> DE
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="competence-page">
+        <section class="container competence-hero">
+            <a href="portfolio.html" class="competence-back">
+                <i class="fas fa-arrow-left"></i>
+                Retour au portfolio
+            </a>
+
+            <div class="competence-hero-grid">
+                <div>
+                    <span class="portfolio-eyebrow">Compétence 2</span>
+                    <h1 class="page-title">
+                        Optimiser des applications
+                    </h1>
+                    <p class="competence-lead">
+                        Auto-positionnement, analyse de comportements existants, optimisation de traitements et justification des choix techniques.
+                    </p>
+                </div>
+
+                <div class="competence-summary">
+                    <span><i class="fas fa-chart-line"></i> Analyse de code</span>
+                    <span><i class="fas fa-gears"></i> Automatisation SDR</span>
+                    <span><i class="fas fa-code-branch"></i> Choix techniques</span>
+                    <span><i class="fas fa-mobile-screen"></i> Optimisation mobile</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="container competence-content">
+            <article class="competence-level-card">
+                <div class="competence-level-top">
+                    <div class="competence-level-badge">
+                        <strong>3</strong>
+                        <span>Niveau</span>
+                    </div>
+                    <div>
+                        <h2>Analyser et optimiser des applications</h2>
+                        <p>Performance · Fiabilité · Sécurité</p>
+                        <p>Niveau atteint en 3e année de BUT Informatique.</p>
+                    </div>
+                </div>
+
+                <div class="competence-ac-grid">
+                    <div class="competence-ac-item">
+                        <span>AC 1</span>
+                        <strong>Anticiper les résultats de diverses métriques, comme le temps d'exécution ou l'occupation mémoire</strong>
+                    </div>
+                    <div class="competence-ac-item">
+                        <span>AC 2</span>
+                        <strong>Profiler, analyser et justifier le comportement d'un code existant</strong>
+                    </div>
+                    <div class="competence-ac-item">
+                        <span>AC 3</span>
+                        <strong>Choisir et utiliser des bibliothèques et méthodes dédiées au domaine d'application</strong>
+                    </div>
+                </div>
+            </article>
+
+            <article class="competence-evaluation">
+                <h2>Tableau d'auto-évaluation</h2>
+                <div class="evaluation-table-wrap">
+                    <table class="evaluation-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Critère d'évaluation</th>
+                                <th scope="col">Insuffisant</th>
+                                <th scope="col">Bien</th>
+                                <th scope="col">Très bien</th>
+                                <th scope="col">Excellent</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Analyser un problème avec méthode</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Excellent"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Comparer des algorithmes pour des problèmes classiques</th>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Très bien"><i class="fas fa-check"></i></span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Formaliser et mettre en œuvre des outils mathématiques pour l'informatique</th>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Très bien"><i class="fas fa-check"></i></span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Choisir des structures de données complexes adaptées au problème</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Excellent"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Utiliser des techniques algorithmiques adaptées pour des problèmes complexes</th>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Bien"><i class="fas fa-check"></i></span></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Comprendre les enjeux et moyens de sécurisation des données et du code</th>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Très bien"><i class="fas fa-check"></i></span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Évaluer l'impact environnemental et sociétal des solutions proposées</th>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Très bien"><i class="fas fa-check"></i></span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Anticiper les résultats des diverses métriques, comme le temps d'exécution ou l'occupation mémoire</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Excellent"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Profiler, analyser et justifier le comportement d'un code existant</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Excellent"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Choisir et utiliser les bibliothèques et méthodes dédiées au domaine d'application</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="is-checked"><span aria-label="Excellent"><i class="fas fa-check"></i></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+
+            <article class="competence-intro">
+                <h2>Auto-positionnement</h2>
+                <p>
+                    Durant ma troisième année de BUT Informatique, j’ai développé ma capacité à analyser le comportement d’applications existantes, comprendre leurs contraintes techniques et proposer des améliorations adaptées. J’ai appris à raisonner davantage sur la qualité d’une solution, sa maintenabilité, son comportement logique ainsi que les choix techniques les plus pertinents selon le contexte d’utilisation. Je considère encore pouvoir approfondir l’utilisation d’outils avancés de profiling et de mesure de performances, mais je suis désormais capable d’identifier des problématiques techniques, d’analyser leur origine et de justifier des solutions adaptées.
+                </p>
+            </article>
+
+            <article class="competence-section">
+                <div class="competence-section-header">
+                    <span class="competence-step">Situation 1</span>
+                    <h2>Stage Itelcom — Analyse et évolution de scripts internes</h2>
+                </div>
+
+                <p>
+                    Durant mon stage chez Itelcom, j’ai travaillé sur la maintenance et la modification de plusieurs scripts utilisés dans un moteur interne propre à l’entreprise. Ces scripts utilisaient un pseudo-code proche du JavaScript mais adapté aux besoins métiers internes.
+                </p>
+
+                <p>Cette mission demandait une forte capacité d’analyse.</p>
+                <p>Avant chaque modification, il était nécessaire de comprendre précisément :</p>
+
+                <ul class="competence-list">
+                    <li>la logique métier existante ;</li>
+                    <li>les scénarios utilisés par les agents ;</li>
+                    <li>les dépendances possibles avec d’autres traitements ;</li>
+                    <li>les risques de régression.</li>
+                </ul>
+
+                <p>Les modifications concernaient notamment :</p>
+
+                <ul class="competence-list">
+                    <li>corrections de comportements logiques ;</li>
+                    <li>suppression de comportements inutiles ;</li>
+                    <li>adaptation de traitements métiers ;</li>
+                    <li>corrections syntaxiques ;</li>
+                    <li>amélioration de scénarios existants.</li>
+                </ul>
+
+                <p>
+                    Ce travail m’a particulièrement fait progresser sur l’AC « Profiler, analyser et justifier le comportement d’un code existant ».
+                </p>
+
+                <p>
+                    Je ne travaillais pas sur un développement entièrement neuf : je devais intervenir sur du code déjà utilisé quotidiennement par des agents. Une erreur pouvait avoir des impacts concrets sur leur travail.
+                </p>
+
+                <p>J’ai donc appris à adopter une démarche plus rigoureuse :</p>
+
+                <ul class="competence-list">
+                    <li>compréhension du fonctionnement avant modification ;</li>
+                    <li>validation progressive ;</li>
+                    <li>environnement de test avant mise en production ;</li>
+                    <li>justification des changements réalisés.</li>
+                </ul>
+
+                <p>
+                    Cette expérience m’a montré qu’en entreprise, analyser un comportement existant est souvent aussi important que développer une nouvelle fonctionnalité.
+                </p>
+
+                <div class="evidence-grid" aria-label="Preuves à mettre pour l'analyse de scripts internes">
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 1</span></div>
+                        <figcaption>Capture extrait script avant/après modification.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 2</span></div>
+                        <figcaption>Exemple scénario métier modifié.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 3</span></div>
+                        <figcaption>Capture environnement de test / validation.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 4</span></div>
+                        <figcaption>Documentation interne liée au fonctionnement SDR/scripts.</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article class="competence-section">
+                <div class="competence-section-header">
+                    <span class="competence-step">Situation 2</span>
+                    <h2>Stage Itelcom — Passage des dossiers en SDR (automatisation)</h2>
+                </div>
+
+                <p>
+                    Une autre mission importante de mon stage consistait à transformer plusieurs traitements existants vers un système SDR automatisé.
+                </p>
+
+                <p>Avant cette évolution, plusieurs opérations étaient gérées manuellement par les utilisateurs :</p>
+
+                <ul class="competence-list">
+                    <li>gestion des délais ;</li>
+                    <li>relances ;</li>
+                    <li>chronomètres utilisateurs ;</li>
+                    <li>suivi manuel des étapes.</li>
+                </ul>
+
+                <div class="profile-columns">
+                    <section class="profile-column">
+                        <h3>Limites observées</h3>
+                        <ul class="competence-list">
+                            <li>risques d’oubli ;</li>
+                            <li>erreurs humaines ;</li>
+                            <li>manque de visibilité ;</li>
+                            <li>faible centralisation ;</li>
+                            <li>perte de temps.</li>
+                        </ul>
+                    </section>
+
+                    <section class="profile-column">
+                        <h3>Travail d’évolution</h3>
+                        <ul class="competence-list">
+                            <li>nettoyer certaines variables ;</li>
+                            <li>restructurer les messages ;</li>
+                            <li>repenser les scénarios ;</li>
+                            <li>adapter la logique à l’automatisation.</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <p>
+                    Le passage vers SDR nécessitait non seulement une adaptation fonctionnelle mais aussi une analyse profonde des traitements existants.
+                </p>
+
+                <p>
+                    Cette mission m’a permis de comprendre qu’optimiser une application ne signifie pas uniquement améliorer la vitesse d’exécution.
+                </p>
+
+                <p>L’optimisation peut également concerner :</p>
+
+                <ul class="competence-list">
+                    <li>la fiabilité ;</li>
+                    <li>la lisibilité logique ;</li>
+                    <li>la réduction d’actions manuelles ;</li>
+                    <li>la maintenabilité ;</li>
+                    <li>la qualité globale du traitement.</li>
+                </ul>
+
+                <p>Grâce au SDR, plusieurs gains ont été obtenus :</p>
+
+                <ul class="competence-list">
+                    <li>automatisation des relances ;</li>
+                    <li>meilleure visibilité ;</li>
+                    <li>réduction des erreurs ;</li>
+                    <li>centralisation des informations ;</li>
+                    <li>amélioration organisationnelle.</li>
+                </ul>
+
+                <p>
+                    J’ai ainsi développé ma capacité à analyser des processus existants et à proposer des solutions plus robustes et plus efficaces.
+                </p>
+
+                <div class="evidence-grid" aria-label="Preuves à mettre pour le passage en SDR">
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 5</span></div>
+                        <figcaption>Schéma fonctionnement avant SDR.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 6</span></div>
+                        <figcaption>Schéma fonctionnement après SDR.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 7</span></div>
+                        <figcaption>Capture tableau SDR / relances.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 8</span></div>
+                        <figcaption>Extrait logique automatisée.</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article class="competence-section">
+                <div class="competence-section-header">
+                    <span class="competence-step">Situation 3</span>
+                    <h2>SAE5 — Choix techniques et qualité applicative</h2>
+                </div>
+
+                <p>
+                    Dans le cadre de la SAE5 Jardins de Cocagne, nous avons dû sélectionner les technologies les plus adaptées à notre projet.
+                </p>
+
+                <p>Nous avons retenu :</p>
+
+                <ul class="competence-list">
+                    <li>Symfony ;</li>
+                    <li>Bootstrap ;</li>
+                    <li>Twig ;</li>
+                    <li>MySQL ;</li>
+                    <li>Docker ;</li>
+                    <li>GitLab CI/CD.</li>
+                </ul>
+
+                <p>
+                    Ces choix ne relevaient pas uniquement d’une préférence personnelle. Ils devaient être justifiés selon plusieurs critères :
+                </p>
+
+                <ul class="competence-list">
+                    <li>maintenabilité ;</li>
+                    <li>sécurité ;</li>
+                    <li>compatibilité ;</li>
+                    <li>modularité ;</li>
+                    <li>performance ;</li>
+                    <li>facilité d’intégration.</li>
+                </ul>
+
+                <p>Par exemple :</p>
+
+                <div class="profile-columns">
+                    <section class="profile-column">
+                        <h3>Architecture et données</h3>
+                        <p>Symfony apportait une architecture MVC robuste et une bonne séparation des responsabilités.</p>
+                        <p>MySQL permettait une gestion fiable des données relationnelles.</p>
+                    </section>
+
+                    <section class="profile-column">
+                        <h3>Environnement et interface</h3>
+                        <p>Docker permettait d’obtenir des environnements reproductibles.</p>
+                        <p>Bootstrap facilitait la création d’interfaces responsive rapidement.</p>
+                    </section>
+                </div>
+
+                <p>
+                    Ce projet m’a permis de développer l’AC « Choisir et utiliser des bibliothèques et méthodes dédiées au domaine d’application ».
+                </p>
+
+                <p>
+                    J’ai compris que le choix d’un framework ou d’un outil doit être justifié par rapport aux besoins du projet et non uniquement par habitude technique.
+                </p>
+
+                <div class="evidence-grid" aria-label="Preuves à mettre pour les choix techniques SAE5">
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 9</span></div>
+                        <figcaption>Slide technologies retenues.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 10</span></div>
+                        <figcaption>Slide justification des choix techniques.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 11</span></div>
+                        <figcaption>Capture Docker / GitLab CI/CD.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 12</span></div>
+                        <figcaption>Architecture applicative Symfony.</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article class="competence-section">
+                <div class="competence-section-header">
+                    <span class="competence-step">Situation 4</span>
+                    <h2>SAE6 — Optimisation de l’expérience mobile</h2>
+                </div>
+
+                <p>
+                    Dans la SAE6, nous avons fait évoluer la solution Jardins de Cocagne vers une version mobile destinée aux clients et aux livreurs.
+                </p>
+
+                <p>
+                    Cette évolution impliquait une analyse spécifique liée aux usages mobiles.
+                </p>
+
+                <p>L’application devait être optimisée pour :</p>
+
+                <ul class="competence-list">
+                    <li>consultation rapide ;</li>
+                    <li>suivi du livreur ;</li>
+                    <li>utilisation terrain ;</li>
+                    <li>QRCode ;</li>
+                    <li>ergonomie tactile ;</li>
+                    <li>navigation simplifiée.</li>
+                </ul>
+
+                <p>Cette adaptation nécessitait une réflexion sur :</p>
+
+                <ul class="competence-list">
+                    <li>organisation des écrans ;</li>
+                    <li>simplification des interactions ;</li>
+                    <li>accessibilité des fonctionnalités ;</li>
+                    <li>adaptation du parcours utilisateur.</li>
+                </ul>
+
+                <p>
+                    Cette expérience m’a appris que l’optimisation d’une application concerne aussi l’expérience utilisateur et la pertinence des choix d’interface selon le contexte d’utilisation.
+                </p>
+
+                <div class="evidence-grid" aria-label="Preuves à mettre pour l'optimisation mobile">
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 13</span></div>
+                        <figcaption>Interface mobile client.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 14</span></div>
+                        <figcaption>Interface livreur.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 15</span></div>
+                        <figcaption>Scan QRCode.</figcaption>
+                    </figure>
+                    <figure class="evidence-placeholder">
+                        <div class="evidence-visual"><i class="fas fa-image"></i><span>Image 16</span></div>
+                        <figcaption>Suivi tournée mobile.</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article class="competence-bilan">
+                <span class="competence-step">Bilan complémentaire</span>
+                <h2>Ressources mobilisées et recul</h2>
+
+                <div class="bilan-grid">
+                    <section class="bilan-card">
+                        <h3>Évolution constatée</h3>
+                        <p>
+                            Au départ, j’avais tendance à corriger directement un problème. Le stage Itelcom m’a appris à analyser d’abord le comportement existant : comprendre les scripts, identifier les dépendances, tester les modifications et limiter les régressions. Le passage en SDR m’a aussi montré que l’optimisation peut concerner la fiabilité et l’organisation, pas seulement la vitesse.
+                        </p>
+                    </section>
+
+                    <section class="bilan-card">
+                        <h3>Ressources mobilisées en formation</h3>
+                        <p>
+                            J’ai mobilisé les enseignements d’algorithmique, de structures de données, de qualité logicielle, de tests, de sécurité, de conception d’applications et de gestion de projet. Ces ressources m’ont aidé à raisonner sur les impacts d’un changement et sur la justification des choix techniques.
+                        </p>
+                    </section>
+
+                    <section class="bilan-card">
+                        <h3>Ressources cherchées en autonomie</h3>
+                        <p>
+                            J’ai complété ces bases avec la documentation interne Itelcom sur les scripts et le SDR, l’historique GitLab des modifications, ainsi que des recherches sur PHP, JavaScript, Docker, Symfony et les bonnes pratiques de validation avant mise en production.
+                        </p>
+                    </section>
+
+                    <section class="bilan-card">
+                        <h3>Meilleure maîtrise acquise</h3>
+                        <p>
+                            Ces situations m’ont permis de mieux maîtriser l’analyse d’un existant. J’ai compris qu’une solution correcte doit être cohérente avec le contexte métier, les contraintes techniques et les usages réels. Les choix de la SAE5 et l’optimisation mobile de la SAE6 ont renforcé cette logique.
+                        </p>
+                    </section>
+
+                    <section class="bilan-card">
+                        <h3>Si c’était à refaire</h3>
+                        <p>
+                            Je formaliserais davantage les analyses avant modification : scénarios de test, comparaison avant/après, risques identifiés et justification écrite des décisions. Cela rendrait les optimisations plus mesurables et plus faciles à expliquer.
+                        </p>
+                    </section>
+                </div>
+            </article>
+
+            <article class="competence-reflection">
+                <span class="competence-step">Analyse réflexive</span>
+                <h2>Recul personnel</h2>
+                <p>
+                    Ces expériences m’ont permis de comprendre que l’analyse et l’optimisation d’une application dépassent largement la notion de performance pure.
+                </p>
+
+                <p>Il faut être capable :</p>
+
+                <ul class="competence-list">
+                    <li>d’étudier un comportement existant ;</li>
+                    <li>d’identifier les points faibles ;</li>
+                    <li>de comprendre les contraintes métier ;</li>
+                    <li>de choisir des outils adaptés ;</li>
+                    <li>de justifier ses décisions techniques.</li>
+                </ul>
+
+                <p>
+                    Le stage chez Itelcom m’a particulièrement confronté à cette réalité professionnelle. La compréhension de scripts existants, la logique SDR et la gestion des traitements métier m’ont appris à analyser avant d’agir.
+                </p>
+
+                <p>
+                    La SAE5 m’a davantage apporté une réflexion sur les choix technologiques et architecturaux.
+                </p>
+
+                <p>
+                    La SAE6 m’a sensibilisé à l’optimisation orientée utilisateur et multi-support.
+                </p>
+
+                <p>
+                    Aujourd’hui, je me sens plus capable d’analyser une application existante, d’identifier des améliorations possibles et de proposer des solutions cohérentes techniquement et fonctionnellement.
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
