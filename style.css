@@ -2188,6 +2188,66 @@ textarea,
   box-shadow: var(--shadow-sm);
 }
 
+.math-resource-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.math-resource-grid-single {
+  grid-template-columns: minmax(260px, 420px);
+}
+
+.math-resource-card {
+  min-height: 220px;
+  display: grid;
+  grid-template-rows: 48px auto 1fr auto;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  color: var(--text-primary);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.math-resource-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(14, 165, 233, 0.4);
+  box-shadow: var(--shadow-md);
+}
+
+.math-resource-icon {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: #dc2626;
+  background: rgba(220, 38, 38, 0.1);
+  font-size: 1.25rem;
+}
+
+.math-resource-code {
+  color: #0f766e;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.math-resource-card strong {
+  font-family: var(--font-heading);
+  font-size: 1.12rem;
+  line-height: 1.25;
+}
+
+.math-resource-card span:last-child {
+  color: var(--accent-hover);
+  font-weight: 800;
+}
+
 .bilan-card:last-child {
   grid-column: 1 / -1;
 }
@@ -2251,7 +2311,8 @@ textarea,
   .competence-ac-grid-four,
   .bilan-grid,
   .profile-columns,
-  .evidence-grid {
+  .evidence-grid,
+  .math-resource-grid {
     grid-template-columns: 1fr;
   }
 
